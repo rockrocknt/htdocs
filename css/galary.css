@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+.cross-links {
+	width:642px; 
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+#static-content
+{
+	width: 642px;
+	margin: auto;
+	z-index: 0;
+	position: relative;
+}
+.slider-wrap
+ {
+	position: relative;
+	width: 642px;
+	background: url("../images/ajax-loader.gif") no-repeat center center;
+}
+.csw {width: 642px; height: 150px; background: transparent; overflow: hidden;display:none}
+.csw .loading {margin: 350px 0 350px 0; text-align: center;display:none }
+#one-column 
+{
+	margin-left: 20px!important;
+	margin-right: 15px!important;
+}
+.stripNavL 
+{
+	background: url("../images/leftarrow.png") no-repeat center;
+	left: 4px;
+	z-index: 100;
+	top: 230px;
+}
+.stripNav 
+{
+	margin: auto;
+	display: none;
+}
+.stripNav ul 
+{ 
+	list-style: none;
+}
+.stripNav ul li 
+{
+	float: left;
+	margin-right: 2px;
+}
+.stripNav a .stripNavR a 
+{
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 32px;
+	background: #c6e3ff;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 0 0px;
+	outline: none;
+}
+.stripNav li a:hover 
+{
+	background: #333;
+}	
+.stripNav li a.current 
+{
+	background: #000;
+	color: #fff;
+}
+.stripNavR 
+{
+	background: url("../images/rightarrow.png") no-repeat center;
+	right: 4px;
+	top: 230px;
+}
+.stripNavL, .stripNavR 
+{ 
+	position: absolute;
+	top: 200px;
+	text-indent: -999999px;
+	outline:none;
+}
+		
+.stripNavL a, .stripNavR a 
+{
+	display: block;
+	height: 90px;
+	width: 52px;
+	outline: none;
+}		
+.stripNavL a:active, .stripNavR a:active
+ {
+	outline: none;
+}
+		
+.stripNavL a:focus, .stripNavR a:focus 
+{
+	-moz-outline-style: none;
+}
+		
+.stripViewer  .panelContainer
+{
+	position: relative;
+	overflow: hidden;
+	margin: auto;
+	width: 642px;
+	height: auto !important;
+	clear: both;
+	background: #fff;
+}
+.stripViewer .panelContainer 
+{ 
+	position: relative;
+	left: 0; top: 0;
+	width: 100%;
+	list-style-type: none;
+			
+}
+		
+.stripViewer .panelContainer .panel 
+{ 
+	float:left;
+	height: 100%;
+	position: relative;
+	width: 642px;
+}
+		
+.stripViewer .panelContainer .panel .wrapper 
+{ 
+	/*padding: 10px;*/
+	padding-top: 0px;
+	padding-bottom: 0px;
+			
+}
+.panel {
+float: left;
+height: 100%;
+position: relative;
+width: 642px;
+}
+.cross-links {
+		width:642px; 
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+		
+	
+		}
+.stripViewer .panelContainer .panel ul {
+			text-align: left;
+			/*margin: 0 15px 0 30px;*/
+			
+}
+/** end of look book page **/
+.stripNavL2, .stripNavR2 { /* The left and right arrows */
+		position: absolute;
+		top: 280px;
+		text-indent: -999999px;
+		outline:none;
+}
+		
+.stripNavL2 a, .stripNavR2 a {
+		display: block;
+		height: 90px;
+		width: 52px;
+		outline: none;
+}		
+.stripNavL2 a:active, .stripNavR2 a:active {
+		outline: none;
+}
+		
+.stripNavL2 a:focus, .stripNavR2 a:focus {
+		-moz-outline-style: none;
+}
+		
+.stripNavL2 {
+		left: 4px;
+		z-index: 100;
+		top:230px;
+}
+		
+.stripNavR2 {			
+		right: 4px;
+		top:230px;
+}
+.sanphamhome li{
+    list-style: none;
+    padding-left: 10px;
+    float: left;
+}

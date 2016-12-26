@@ -1,0 +1,4 @@
+<? global $do; ?>
+
+<div class="clear"></div>
+<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating" class="rate" style="border:0px;font-weight:normal"><span class="ratePoint_news">(<span itemprop="reviewCount"><?=$do!="main"?"2712":"8732";?></span> bình chọn, <span itemprop="ratingValue">9</span>/<span itemprop="bestRating">10</span> điểm)</span><span class="rateStars_news"><img src="/images/star-red.gif" alt="" height="26" width="15" /><img src="/images/star-red.gif" alt="" height="26" width="15" /><img src="/images/star-red.gif" alt="" height="26" width="15" /><img src="/images/star-red.gif" alt="" height="26" width="15" /><img src="/images/star-none.gif" alt="" height="26" width="15" /></span></div><div class="clear"></div>

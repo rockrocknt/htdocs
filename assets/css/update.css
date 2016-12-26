@@ -1,0 +1,20 @@
+.titleSearch {
+    cursor: pointer;
+    margin-top: 3px;
+    padding: 12px 0 9px;
+    border: 0;
+    background: 0 0;
+    font-family: GillSans,Verdana,Arial,sans-serif;
+    font-size: 17px;
+    color: #00693c;
+    border-top: 1px solid #e0e2e3;
+}
+
+body {
+	background-color: blue;
+}
+
+.product-image:hover {
+	opacity: .6;
+}
+

@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+div.content-cart{ padding:0px 0px 0px 20px;}
+
+.cart-container 
+{
+	/*width: 629px;*/
+	padding: 20px 0px 0px 0px;
+	background: #fff;
+	float: left;
+	line-height: 22px;
+	
+}
+
+.gio-hang
+{
+	border-left: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	width: 100%;
+	border-collapse: separate;
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+.tr 
+{
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+.gio-hang tr td
+{
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	padding: 10px 11px;
+	text-align: left;
+}
+
+.cart-header td 
+{
+	font-weight: bold;
+}
+.gio-hang strong, b {
+	font-weight: bold;
+	color:#00cccc;
+}
+.chitiet-sp 
+{
+	background: url(../images/btn_bg.png) left top no-repeat;
+	border-radius: 4px;
+	height: 24px;
+	width:73px;
+	font-size: 13px;
+	text-align: center;
+	float: left;
+	padding: 0 0px;
+	
+}
+.gio-hang a
+{
+	color:#FFF; !important;
+}
+.fr 
+{
+	float: right !important;
+	
+}
+/*///////////////////////////B2*/
+.cl 
+{
+	clear: both;
+}
+.webForm label {
+display: block;
+}
+.webForm input[type="text"], .webForm input[type="password"] {
+padding: 5px 0 5px 10px;
+width: 284px;
+height: 18px;
+}
+.input, input[type="password"], input[type="search"], isindex {
+-webkit-appearance: textfield;
+padding: 1px;
+background-color: white;
+border: 2px inset;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+cursor: auto;
+}
+.textarea {
+-webkit-appearance: textarea;
+background-color: white;
+border: 1px solid;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+flex-direction: column;
+resize: auto;
+cursor: auto;
+padding: 2px;
+white-space: pre-wrap;
+word-wrap: break-word;
+}
+
+
+
+/* CSS Document */
+
+/*css form*/
+body
+{
+    text-align: left;
+}
+.webForm{
+    width:284px;
+    float:left;
+}
+.webForm label {
+    display:block;
+    font-size: 12px;
+    font-family: Tahoma,Geneva,sans-serif;
+    color: rgb(85, 84, 83);
+}
+.webForm label .required {
+    color:#f00;
+}
+.webForm input[type="text"], .webForm input[type="password"] {
+    padding:5px 0 5px 10px;
+    width:284px;
+    height:18px;
+}
+.webForm textarea {
+    padding:5px 10px;
+    width:284px;
+    resize:none;
+    height:150px;
+}
+.webForm input[type="submit"], .webForm input[type="button"] {
+    border:medium none;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:4px;
+    padding:3px 8px;
+    color:#fff;
+}
+#formLogin input[type="text"], #formLogin input[type="password"], #formSearch input[type="text"] {
+    width:160px !important;
+}
+#captchaImg, #captchaImgReply {
+    border-radius:3px;
+}
+.address{
+    float:right;
+    width:215px;
+}
+/*css phan trang*/
+.Paging, .pagination {
+    float:left;
+    width:100%;
+    margin-top:10px;
+}
+.Paging ul, .pagination ul {
+    float:right;
+}
+.Paging ul li, .pagination ul li {
+    margin-left:5px;
+    font-weight:bold;
+    float:left;
+}
+.Paging ul li a, .pagination ul li a {
+    height: 24px;
+    display: block;
+    padding:0 10px;
+    border-radius:3px;
+    line-height:24px;
+    background:url(../images/btn-detail.png) left top repeat-x;
+}
+.Paging ul li a.Active, .Paging ul li a:hover, .pagination ul li a.active, .pagination ul li a:hover {
+    background:url(../images/btn-detail.png) left bottom repeat-x;
+    color:#fff;
+}
+.share-socials {
+    float:left;
+}
+.share-socials li {
+    float:left;
+    margin-right:5px;
+}
+.share-socials img {
+    width:20px;
+}
+
+.checkoutTitle {
+    font-weight:bold;
+    font-size:14px;
+    text-align:left;
+  /*  color:#CC0099; */
+    margin:10px 0;
+    text-transform:uppercase;
+}
+.detail_checkout_top {
+    float: left;
+    width: 730px;
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+.btn_checkout {
+    background: none repeat scroll 0 0 #00D0DD;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.btn_checkout:hover {
+    color:#fff;
+}

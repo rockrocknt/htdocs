@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+div.info_contact_home{ margin-top:26px;}
+div.banner_center_home{ height:406px;
+    background:url(../images/nen_bannerhome.jpg)
+repeat-y;}
+.banner_center_home a
+{
+	color:#fff;
+}
+.banner_center_home a:hover
+{
+	color:#000099;
+	text-decoration:none;	
+}
+div.content_home{ padding:20px 0px 20px 20px;}	
+.sanphamhome li{
+    list-style: none;
+    padding-left: 10px;
+    float: left;
+}
+.gioithieuhome_title{
+	padding: 50px 0px 18px 29px;
+	float: left;
+	font-size:13px;
+	width:286px;
+	text-align:justify;	
+	color:#CCC;
+	 
+}
+.gioithieuhome_content{	
+	 padding-top:20px;
+	 color:#FFF;
+	 line-height:22px;
+	 height:230px;
+	
+}
+.promotionhome_title {
+	padding: 44px 37px 18px 0px;
+	float: right;
+	font-size: 13px;
+	width: 262px;
+	text-align: justify;
+	line-height: 22px;
+}
+.promotionhome_content{	
+	 padding-top:3px;
+	 color:#FFF;
+	 line-height:22px;
+	 height:142px;
+	
+}
+.quatang_img
+{
+	border:1px solid #cccccc;
+}
+
+.xemchihome a
+{	
+	float:right;
+	color:#CCC;
+}
+.shophome_img
+{
+	padding-left:20px;
+}
+.body_home
+{	
+	margin:0; padding: 0; font-family: Tahoma; font-size:12px;height:auto;
+
+}

@@ -1,0 +1,79 @@
+/* CSS Document */
+
+/*css form*/
+.webForm{
+	width:315px;
+	float:left;
+}
+.webForm label {
+	display:block;
+}
+.webForm label .required {
+	color:#f00;
+}
+.webForm input[type="text"], .webForm input[type="password"] {
+	padding:5px 0 5px 10px;
+	width:300px;
+	height:18px;
+}
+.webForm textarea {
+	padding:5px 10px;
+	width:290px;
+	resize:none;
+	height:150px;
+}
+.webForm input[type="submit"], .webForm input[type="button"] {
+	border:medium none;
+	cursor:pointer;
+	font-weight:bold;
+	border-radius:4px;
+	padding:3px 8px;
+	background:#00D0DD;
+	color:#fff;
+}
+#formLogin input[type="text"], #formLogin input[type="password"], #formSearch input[type="text"] {
+	width:160px !important;
+}
+#captchaImg, #captchaImgReply {
+	border-radius:3px;
+}
+.address{
+	float:right;
+	width:215px;
+}
+/*css phan trang*/
+.Paging, .pagination {
+	float:left;
+	width:100%;
+	margin-top:10px;
+}
+.Paging ul, .pagination ul {
+	float:right;
+}
+.Paging ul li, .pagination ul li {
+	margin-left:5px;
+	font-weight:bold;
+	float:left;
+}
+.Paging ul li a, .pagination ul li a {
+	height: 24px;
+	display: block;
+	padding:0 10px;
+	border-radius:3px;
+	line-height:24px;
+	background:url(../images/btn-detail.png) left top repeat-x;
+}
+.Paging ul li a.Active, .Paging ul li a:hover, .pagination ul li a.active, .pagination ul li a:hover {
+	background:url(../images/btn-detail.png) left bottom repeat-x;
+	color:#fff;
+}
+.share-socials {
+	float:left;
+}
+.share-socials li {
+	float:left;
+	margin-right:5px;
+}
+.share-socials img {
+	width:20px;
+}

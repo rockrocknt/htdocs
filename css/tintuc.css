@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tintuc_folder
+{
+	padding: 0px 19px 11px;
+	margin: 0px 0px 6px;
+	height:105px;
+	overflow: hidden;
+	
+	
+}
+.left_ftintuc
+{
+	float: left;
+	padding: 4px 0px 0px;
+}
+.img_ftintuc
+{
+	height: 119px;
+	width:158px;
+	position: relative;
+	float: left;
+	margin: 0px 10px 0px 0px;
+	overflow: hidden;
+	background:url(../images/tintuc_img_bg.png) no-repeat;
+	padding:5px 5px 5px 6px;
+	
+}
+.right_ftintuc
+{
+	width: 434px;
+	float: left;
+	text-align:justify;
+}
+.list_tintuc
+{
+	color:#666666;
+	font-size:14px;
+	font-weight:bold;
+	padding-bottom:10px;	
+}
+.content_tintuc
+{
+	color:#000;
+	font-size:13px;
+}
+/*////////////////// chi tiet tin tuc */
+.chitiettintuc_folder
+{
+	padding: 0px 0px 11px;
+	margin: 0px 0px 6px 0px;
+	height:auto;
+	overflow: hidden;
+	line-height:22px;
+	
+}
+.right_chitiettin
+{
+	width: 610px;
+	float: left;
+	text-align:justify;
+}
+.other-chitiettin {
+	padding:20px 10px 20px 20px;
+}
+.other-chitiettin a{
+	color:#000
+}
