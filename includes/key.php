@@ -11,8 +11,8 @@ $db_name = 'myphamnew';
 $db_host = 'localhost';
 
 
-define('SUB_DOMAIN', 'http://ztest.hongleocolong.com');
-define('DOMAIN', 'http://hongleocolong.com');
+define('SUB_DOMAIN', 'http://demo.myphamchonam.com/');
+define('DOMAIN', 'http://www.myphamchonam.com');
 define('SUB_DOMAIN_LOCAL', 'http://localhost/koss');
 
  return;

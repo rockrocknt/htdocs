@@ -151,7 +151,7 @@
                             <div id="ajaxloader"><img class="numloader" id="ajaxloader<?=$stips[$i]['id']?>" src="images/site/loader.gif" alt="loader" /></div>
                         </td>
                         <td align="center">
-                            <img src="<?=$stips[$i]["img"]?>" alt="<?=$stips[$i]["img"]?>" width="50" alt="" />
+                            <img src="<?=DOMAIN?>/<?=$stips[$i]["img"]?>" alt="<?=$stips[$i]["img"]?>" width="50" alt="" />
 
                         </td>
                         <td align="center"><?=$stips[$i]["code"]?></td>
