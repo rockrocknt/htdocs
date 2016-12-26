@@ -271,12 +271,6 @@ function Editsm()
         $arr['cid_menu_left'] = $_POST["cid_menu_left"];
     }
 
-    $arr['pid2']=$_POST["pid2"];
-    $arr['pid3']=$_POST["pid3"];
-    $arr['pid4']=$_POST["pid4"];
-    $arr['pid5']=$_POST["pid5"];
-
-
     $arr['h1_vn']=$_POST["h1_vn"];
 
 
@@ -421,7 +415,7 @@ function Editsm()
 
 	if ($act=="addsm")
 	{
-		$id = vaInsert('categories', $arr,0);
+		$id = vaInsert('categories', $arr);
 		$arr['unique_key_vn']= insertUniquekey(vietnamese_permalink(SafeFormValue("unique_key_vn")), 'vn', $id, $cid);
 		$arr['unique_key_en']= insertUniquekey(vietnamese_permalink(SafeFormValue("unique_key_en")), 'en', $id, $cid);
 		vaUpdate('categories', $arr, ' id='.$id);		
@@ -432,7 +426,7 @@ function Editsm()
 	{
 		$arr['unique_key_vn']= updateUniquekey(vietnamese_permalink(SafeFormValue("unique_key_vn")), 'vn', $id, $cid);
 		$arr['unique_key_en']= updateUniquekey(vietnamese_permalink(SafeFormValue("unique_key_en")) , 'en', $id, $cid);
-		vaUpdate('categories',$arr,' id='.$id);		
+		vaUpdate('categories',$arr,' id='.$id );
 		$msg = "Sửa thành công!";
 		//insertLog('Sửa danh mục: '.$arr['name_vn']);
 	}	

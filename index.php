@@ -38,7 +38,7 @@ $prefix_url = $lg=="vn"?"/":"/en/";
     else{
         
 
-ob_start();
+//ob_start();
     // end cache
 
 include('language/'.$lg.'.php');
@@ -321,8 +321,8 @@ else{
 ?>
 <?php
     global $cache_filename;
-    file_put_contents($cache_filename, ob_get_contents());
+//    file_put_contents($cache_filename, ob_get_contents());
 
-    ob_end_flush();
+//    ob_end_flush();
     }
 ?>

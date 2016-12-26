@@ -151,9 +151,8 @@
                             <div id="ajaxloader"><img class="numloader" id="ajaxloader<?=$stips[$i]['id']?>" src="images/site/loader.gif" alt="loader" /></div>
                         </td>
                         <td align="center">
-                            <?php if (file_exists($stips[$i]["img"])) { ?>
-                                <img src="<?=$stips[$i]["img"]?>" width="50" alt="" />
-                            <? } ?>
+                            <img src="<?=$stips[$i]["img"]?>" alt="<?=$stips[$i]["img"]?>" width="50" alt="" />
+
                         </td>
                         <td align="center"><?=$stips[$i]["code"]?></td>
                         <td class="title_name_data">
