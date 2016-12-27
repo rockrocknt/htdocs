@@ -124,10 +124,10 @@
             id=<?=$stips[$i]["id"]?>
         </td>
         <td>
-        <?php// if (file_exists($stips[$i]["img"])) { ?>
-        <img  src="<?=$stips[$i]["img"]?>" width="100" title="<?=$stips[$i]["img"]?>"
+        <?php // if (file_exists($stips[$i]["img"])) { ?>
+        <img  src="<?=DOMAIN?>/<?=$stips[$i]["img"]?>" width="100" title="<?=$stips[$i]["img"]?>"
               alt="img=<?=$stips[$i]["img"]?>" />
-        <?// } ?>
+        <? // } ?>
 
         </td>
         <td class="title_name_data">
