@@ -135,15 +135,21 @@
             <div class="row-fluid">
                 <div class="span9">
                     <ul class="inline top-cat-menu">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
                         <?php
 
                         $listMenu = ImagesGroup::getimgbycid(16);
                         foreach ($listMenu as $img) {
                         $cid = $img['category_id'];
-                        $catMenu = new Categories(Categories::getById($cid));
+                        $catMe = Categories::getById($cid);
+                        $link = $img['url_vn'];
+                        if (!empty($catMe)) {
+                            $catMenu = new Categories(Categories::getById($cid));
+                            $link = $catMenu->getLink();
+                        }
                         $name = $img['name_vn'];
-                        $link = $catMenu->getLink();
-
                         ?>
                             <li
                                 <?php if (($currentCat['pid'] == $catMenu->getID()) || ($currentCat['id'] == $catMenu->getID())): ?>
