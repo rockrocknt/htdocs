@@ -68,5 +68,12 @@ class ImagesGroup{
 
         return $r;
     }
+    public static function get_img_by_cid($cid, $limit){
+       
+        global $db;
+        $sql = "select * from img where active=1 and ( cid = $cid ) order by num asc, id desc limit $limit";
+        $r = $db->getAll($sql);
+        return $r;
+    }
 }
 ?>

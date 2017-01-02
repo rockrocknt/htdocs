@@ -770,12 +770,14 @@
             $where = "";
             for($i=0;$i<count($list);$i++)
             {
+                if (empty($list[$i])) continue;
                 if ($where != "") $where .= " or `id`=".$list[$i];
                 else $where = " `id`=".$list[$i];
             }
             $sql = "select * from products where ". $where." and name_$lg<>'' and active=1 order by id desc  limit 9";
 
             $lastProducts = $db->getAll($sql);
+
             /*
              * $listPro = explode (";",$string['content_vn']);
              * <?php

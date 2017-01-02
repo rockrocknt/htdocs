@@ -1,4 +1,19 @@
 <div class="product-item">
+    <a href="<?php echo $productObj->getLink(); ?>">
+        <img alt="" src="<?=DOMAINIMAGE?>/<?= $product_lists[$j]['img']; ?>" />
+        <h3><?= $product_lists[$j]['name_vn']; ?></h3>
+    </a>
+    <div class="tag-line">
+        <span> <?= $product_lists[$j]['descs_en']; ?></span>
+
+    </div>
+    <div class="price">
+        <?php echo $productObj->getPrice(); ?>
+    </div>
+    <a class="cusmo-btn add-button" href="<?php echo $productObj->getLink(); ?>">XEM NGAY</a>
+</div>
+<?php return; ?>
+<div class="product-item">
                <div class="dot-badge red">
                   hot 
                </div>

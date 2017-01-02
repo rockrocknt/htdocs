@@ -13,6 +13,7 @@ $db_host = 'localhost';
 
 define('SUB_DOMAIN', 'http://demo.myphamchonam.com/');
 define('DOMAIN', 'http://www.myphamchonam.com');
+define('DOMAINIMAGE', 'http://www.myphamchonam.com');
 define('SUB_DOMAIN_LOCAL', 'http://localhost/koss');
 
  return;

@@ -323,7 +323,7 @@ h5,
 .products-holder.tab-pane.in{
     display: block;
 }
-.products-holder .product-item h1{
+.products-holder .product-item h1, .products-holder .product-item h3{
     color: #373737;
     font-size: 17px;
     font-weight: bold;

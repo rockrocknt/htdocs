@@ -781,6 +781,10 @@ function Editsm()
 	if (isset($_POST["short_desc_vn"])) {
 		$arr['short_desc_vn'] = SafeFormValue('short_desc_vn');
 	}
+    if (isset($_POST["descs_en"])) {
+        $arr['descs_en'] = $_POST["descs_en"];
+    }
+
     $arr['code'] = SafeFormValue('code');
     $arr['num'] = isset($_POST["num"])?$_POST["num"]:0;
     $arr['active'] = isset($_POST['active'])?'1':'0';

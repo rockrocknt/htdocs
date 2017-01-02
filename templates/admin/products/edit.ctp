@@ -353,6 +353,16 @@
 			</div>
 			<div class="clear"></div>
 		</div>
+        <div class="formRow">
+            <label>Mô tả ngắn ở trang danh mục sản phẩm:</label>
+            <div class="formRight">
+
+                <?php echo $CKEditor->editor("descs_en", $product['descs_en']);?>
+
+                <span class="formNote">Đoạn mô tả ngắn sản phẩm hiển thị ở trang tiếng Anh</span>
+            </div>
+            <div class="clear"></div>
+        </div>
 		<div class="formRow" <?=$showEnglish?>>
 			<label>Mô tả ngắn EN:</label>
 			<div class="formRight">
