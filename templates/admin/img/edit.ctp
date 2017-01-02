@@ -52,7 +52,26 @@
             </div>
             <div class="clear"></div>
         </div>
-
+        <div class="formRow">
+            <label>Xem category id </label>
+            <div class="formRight">
+                <select>
+                    <?php
+                    global $db;
+                    //    $sql = "select name_vn,id from categories where ((pid=121) and (comp=2 or comp=30 or comp=5)) order by name_vn asc";
+                    $sql = "select name_vn,id from categories where ((pid=121) ) order by name_vn asc";
+                    $list = $db->getAll($sql);
+                    ?>
+                    <? for($i=0;$i<count($list);$i++)
+                    {?>
+                        <option><? echo $list[$i]["name_vn"]." -- ".  $list[$i]["id"]?></option>
+                    <?
+                    }?>
+                </select>
+                <span class="formNote">Dùng để xem category id ko có tác dụng gì </span>
+            </div>
+            <div class="clear"></div>
+        </div>
 
 		<div class="formRow">
 			<label>Tải file ảnh:</label>

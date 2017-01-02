@@ -325,7 +325,7 @@ h5,
 }
 .products-holder .product-item h1, .products-holder .product-item h3{
     color: #373737;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     line-height: 18px;
     margin: 12px 0 1px;
@@ -1440,7 +1440,7 @@ color: #6E6E6E;
 padding-left: 5px!important;
 }
 .shopping-cart-page .price{
-    font-size: 24px;
+    font-size: 22px;
     color:#70543E;
     font-weight: bold;
     padding: 57px 0 0;
@@ -1855,4 +1855,8 @@ margin-top: 2px;
 }
 .marginLessBreadCum {
     margin-top: -20px;
+}
+.phiGHText {
+    color: #b22222;
+    font-weight: bold;
 }

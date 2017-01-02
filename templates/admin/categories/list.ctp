@@ -191,8 +191,9 @@
             	<?php if ($stips[$i]["comp"] == 1) { ?>
                 Click để quản lý tin tức
                 <?php } else if ($stips[$i]["comp"] == 2) { ?>
-
+                    <?php if ($stips[$i]["categories_displaytype_id"] == 1) { ?>
                 Click để quản lý sản phẩm
+                        <?php } ?>
                 <?php } else if ($stips[$i]["comp"] == 9) { ?>
                 Click để quản lý danh mục con
                 <?php }else  if ($stips[$i]["comp"] == 6) {?>

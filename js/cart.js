@@ -19,7 +19,7 @@ function view_cart(fullUrl,divCartID)
         function(data)
         {
             $('#' + divCartID).html(data);
-			
+
 	
         });
 }

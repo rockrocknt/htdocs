@@ -3,18 +3,28 @@
 	global $lg, $FullUrl, $prefix_url;
     $num = cart::getQuantity();
 ?>
+<div class="breadcrumb-holder marginLessBreadCum">
+    <div class="container">
+        <ul class="inline bcrumb">
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
 
-<!-- Titlebar
-================================================== -->
-<div class="container">
-<div class="row">
-<div class="col-lg-12 checkout-cart-index" id="pagecart">
+            <li class="active">Giỏ Hàng</li>
 
 
-</div> <!-- <div class=" checkout-cart-index"> -->
-</div> <!-- div row -->
+        </ul>
+    </div>
 </div>
-	
+<section class="section-shopping-cart" id="pagecart">
+</section> <!-- <div class=" checkout-cart-index"> -->
+
+<?php include "widget_html/cart_form.php"; ?>
+
+
+
+<link href="/css/chosen.css" rel="stylesheet">
+<script type="text/javascript" src="/js/chosen.jquery.min.js"></script>
 <script type="text/javascript">
 
 
@@ -26,6 +36,7 @@
             function(data)
             {
                 $("#pagecart").html(data);
+
             });
 
     }

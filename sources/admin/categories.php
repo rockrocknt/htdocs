@@ -272,6 +272,7 @@ function Editsm()
     }
 
     $arr['h1_vn']=$_POST["h1_vn"];
+    $arr['search_key']=$_POST["search_key"];
 
 
 	$arr['name_vn']= isset($_POST["name_vn"])?$_POST["name_vn"]:'';

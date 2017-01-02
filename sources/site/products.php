@@ -242,37 +242,6 @@ function  filterproduct()
 
 
 }
-function filter()
-{
-    global $tpl, $page, $plpage, $products;
-
-    if ((getquery('cid') == 0)
-        && (getquery('chungloai') == 0)
-            && (getquery('mausac') == 0)
-            && (getquery('giatien') == 0)
-            && (getquery('doituong') == 0)
-            && (getquery('vatlieu') == 0)
-            && (getquery('size') == 0))
-    {
-        showallproduct();
-
-    }else
-    {
-        filterproduct();
-    }
-
-
-/*
-    $cat = new Categories(currentCat());
-    $set_per_page = Info::getInfoField('paging_product');
-
-    $result = $cat->getList($page, $set_per_page);
-    // var_dump($result);
-    $plpage = $result['paging'];
-    $products = $result['list'];
-*/
-    $tpl="list";
-}
 
 function getColorandSize()
 {
@@ -289,25 +258,12 @@ function ShowList()
 	//var_dump(getQueryArray());
   global $page, $db, $plpage, $products,$lg,$currentcat;
     $cat = new Categories(currentCat());
-    /*
-  $cat = new Categories(currentCat());
-  $set_per_page = Info::getInfoField('paging_product');
-   // $set_per_page = 200;
-  $result = $cat->getList($page, $set_per_page);
-    // var_dump($result);
-  $plpage = $result['paging'];
-  $products = $result['list'];
-    */
- //  $products = products::getbycid_phu($cat->getID());
 
     $cat_id = $cat->getID();
 
 
     $typesort = getquery('typesort');
     if ($typesort == "") $typesort = getSortDefault();
-
- //   $sqlmain = "select * from products where active=1 and name_$lg<>'' and (( cid=".$cat->getID().") or (tag_id_1 = ".$cat_id." or tag_id_2 = ".$cat_id." or tag_id_3 = ".$cat_id." or tag_id_4 = ".$cat_id." or tag_id_5 = ".$cat_id.")   )";
- //   $sql = $sqlmain."   order by `price` desc";
     // show all
   $sqlmain = "select * from products where active=1 and name_$lg<>'' ";
   
@@ -332,16 +288,8 @@ function ShowList()
 	// get attributes categories
 	foreach ($attributes as $attributeQueryId) {
       $categoryAttribute = null;
-    } 
-	/*
-	((attribute_id = $attributeQueryId)
-	*/
-	
-	// group attribute by category
-	
-	
+    }
   }
-  
 	if (getquery('inStock') > 0) {
 		$sqlmain .=  " and `products`.`is_available` = 1 ";
 	}
@@ -404,23 +352,13 @@ function ShowList()
 		if (empty($productIdList)) $productIdList = 0;
 		$sqlmain = "select * from products where `id` IN (" . $productIdList . ")";
 	}
-	
-	
-	
-	//echo $sqlmain;
-	//$rows = $db->getAll($sqlmain);
-	//var_dump($rows);
-	//die("herer");
+
+    if (in_array($cat->getDisplayType(), array(20))) {
+        $sqlmain = getWhereProductThuongHieu();
+    }
 	
 	
     $columnId = "id";
-	// echo $sqlmain;
-	/*
-    if (!empty($attributes)) {
-      $sqlmain .= " group by `products_attributes`.product_id ";
-      $columnId = " `products_attributes`.product_id";
-    }
-	*/
 
     if ($typesort==1)
     {
@@ -445,6 +383,7 @@ function ShowList()
         $sql = $sqlmain."   order by `is_available` desc, `price` desc";
 
     }
+
 
     $cat = new Categories(currentCat());
     
@@ -487,7 +426,16 @@ function ShowList()
 	}
 
 }
+function getWhereProductThuongHieu()
+{
+    $sqlmain = "select * from products where active=1 and name_vn<>'' ";
+    $current = currentCat();
 
+    if (!empty($current['search_key'])) {
+        $sqlmain .= " and (name_vn like '%" . $current['search_key'] ."%') ";
+    }
+    return $sqlmain;
+}
 function ShowDetail()
 {
   global $db, $lg,$seo, $title_page, $keywords, $descriptions, $product;

@@ -144,58 +144,6 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <?php for($i=2;$i<6;$i++){
-               ?>
-                <div class="formRow">
-                    <label>Danh mục cha <?=$i?></label>
-                    <div class="formRight">
-                        <div class="selector">
-                            <?php
-                            global $db;
-                            //$product['tag_id_1']
-                            $sql ="select * from `categories` where `comp`='1' and `categories_displaytype_id`='5' order by `name_vn` desc ";
-                            $listCate= $db->getAll($sql);
-                            // var_dump($listCate);
-                            ?>
-                            <select name="pid<?=$i?>">
-                                <option value="0"
-                                    <?php
-                                    if (isset($cat['pid'.$i]))
-                                        echoSelectID($cat['pid'.$i],0);
-                                    else echo "selected";
-                                    ?>
-
-                                    >Chọn danh mục cha <?=$i?></option>
-                                <?php
-
-                                for($iaaa=0;$iaaa<count($listCate);$iaaa++)
-                                {
-                                    $item = $listCate[$iaaa];
-                                    if (!isset($item['id'])) continue;
-                                    ?>
-                                    <option value="<?=$item['id']?>" <?php
-                                    if (isset($cat['pid2']))
-                                        echoSelectID($cat['pid'.$i],$item['id'])
-
-                                    ?> ><?=$item['name_vn']?></option>
-                                <?
-                                } // for($i=0;$i<count($listCate);$i++)
-                                ?>
-                            </select>
-
-
-                        </div>
-                        <div class="clear"></div>
-                    <span class="formNote">
-                        Thằng cha <?=$i?> này dùng để chứa các thằng cat1 giới thiệu
-                        Thằng cha phải là thể loại Tin Tức / Kiểu hiện thị : list mới.
-                    </span>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            <?
-            }?>
-
 
             <div class="formRow">
                 <label>Tên danh mục VN</label>
@@ -408,7 +356,7 @@
 			<div class="clear"></div>
 		</div>
 
-            <div class="formRow">
+            <div class="formRow none">
                 <br/>
                 <label>Cid menu left danh mục sản phẩm:</label>
                 <div class="formRight">
@@ -442,7 +390,23 @@
                 <div class="clear"></div>
             </div>
 
+            <div class="formRow " >
+                <label>Text cần tìm cho Kiểu hiển thị là Sản Phẩm Thương hiệu </label>
+                <div class="formRight">
+                    <input type="text" name="search_key" class="tipS" value="<?=$cat['search_key']?>" />
+                    <span class="formNote">Hiện cat danh mục sản phẩm ở sidebar trong Giới Thiệu- mẫu: ;1;2;</span>
+                </div>
+                <div class="clear"></div>
+            </div>
 
+            <div class="formRow " >
+                <label>product cid list</label>
+                <div class="formRight">
+                    <input type="text" name="productcidlist" class="tipS" value="<?=$cat['productcidlist']?>" />
+                    <span class="formNote">Hiện cat danh mục sản phẩm ở sidebar trong Giới Thiệu- mẫu: ;1;2;</span>
+                </div>
+                <div class="clear"></div>
+            </div>
 
             <div class="formRow " >
                 <label>Giá min</label>
@@ -473,14 +437,7 @@
                 <div class="clear"></div>
             </div>
 
-            <div class="formRow " >
-                <label>product cid list</label>
-                <div class="formRight">
-                    <input type="text" name="productcidlist" class="tipS" value="<?=$cat['productcidlist']?>" />
-                    <span class="formNote">Hiện cat danh mục sản phẩm ở sidebar trong Giới Thiệu- mẫu: ;1;2;</span>
-                </div>
-                <div class="clear"></div>
-            </div>
+
 
             <div class="formRow ">
                 <label>Dạng menu con

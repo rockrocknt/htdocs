@@ -150,12 +150,13 @@ class cart{
 							$viewcart[$i]['name'] = $product->getName();
 							$viewcart[$i]['price'] = $price;
                             $viewcart[$i]['link'] = $product->getLink();
-							$viewcart[$i]["img"] = $product->getImageNoThumb();
+							$viewcart[$i]["img"] = $product->getImage2();
 							$viewcart[$i]['soluong'] =$cart['soluong'];
 							$viewcart[$i]['code'] =$product->getCode();
                             $viewcart[$i]['cid'] =$product->getCID();
 							$viewcart[$i]['categoryName'] =$product->getCatName();
 							$viewcart[$i]['thanhtien'] = $cart['soluong'] * $price;
+                            $viewcart[$i]['productObj'] = $product;
 							if ($cart['size'] != "undefined")
 								$viewcart[$i]['size'] = $cart['size'];
 							else

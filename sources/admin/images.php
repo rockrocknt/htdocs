@@ -218,7 +218,7 @@ function Editsm()
     $arr['name_vn']=$_POST["name_vn"];
     $arr['name_en']=$_POST["name_en"];
     $arr['colorbg_code']=$_POST["colorbg_code"];
-    $arr['url_en']= $_POST["url_en"];
+    $arr['url_en']= isset($_POST["url_en"]) ? $_POST["url_en"] : "";
     $arr['url_vn']= $_POST["url_vn"];
 
     $arr['category_id']= $_POST["category_id"];

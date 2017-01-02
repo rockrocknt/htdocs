@@ -279,9 +279,10 @@ else{
             }
             if ( (!$isDetail) ) {
             //seo
-                $title_page = $cat1["title_$lg"];
-                $keywords = $cat1["keyword_$lg"];
-                $descriptions = $cat1["des_$lg"];
+
+                $title_page = isset($cat1["title_$lg"]) ? $cat1["title_$lg"] : "not set title";
+                $keywords =  isset($cat1["keyword_$lg"]) ? $cat1["keyword_$lg"] : "not set keyword";
+                $descriptions = isset($cat1["des_$lg"]) ? $cat1["des_$lg"] : "not set des";
             }
             if ($isDetail) {
 				//$cat1 =  Categories::getByUniqueKey($url_array[1]); 

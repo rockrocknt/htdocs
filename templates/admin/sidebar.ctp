@@ -233,28 +233,28 @@ $(function(){
                 {
                     echo   ($_GET['cid']==2)?'class="this"':'';
                 }
-                ?>><a href="admin.php?do=img_group&act=detail&cid=2" title="">Nội dung Footer</a></li>
+                ?>><a href="admin.php?do=img_group&act=detail&cid=2" title="">TRANG CHỦ - tab sản phẩm</a></li>
 
 
 
                 <li
-                    class="none"
+
                     <?php
                 if (isset($_GET['cid']))
                 {
                     echo   ($_GET['cid']==6)?'class="this"':'';
                 }
-                ?>><a href="admin.php?do=img_group&act=detail&cid=6" title="">trang Home - Best Seller</a></li>
+                ?>><a href="admin.php?do=img_group&act=detail&cid=6" title="">SIDEBAR - DANH MỤC SẢN PHẨM</a></li>
 
                 <li
-                    class="none"
+
                     <?php
                 if (isset($_GET['cid']))
                 {
                     echo  ($_GET['cid']==10)?'class="this"':'';
                 }
                 ?>>
-                    <a href="admin.php?do=img_group&act=detail&cid=10" title="">trang Home - Top Rated</a></li>
+                    <a href="admin.php?do=img_group&act=detail&cid=10" title="">SIDEBAR - Thương Hiệu</a></li>
 
 
                 <li

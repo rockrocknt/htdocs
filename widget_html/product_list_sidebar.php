@@ -6,18 +6,26 @@
             <div class="accordion-group">
                <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"  href="#collapseOne">
-                     day cream
+                     Danh mục sản phẩm
                   </a>
                </div>
-               <div id="collapseOne" class="accordion-body collapse in">
+               <div id="collapseOne" class="accordion-body collapse ">
                   <div class="accordion-inner">
-
                      <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
+                        <?php
+                        $listDanhMuc = ImagesGroup::get_img_by_cid(6,100);
+                        foreach($listDanhMuc as $item) {
+                            $name = $item['name_vn'];
+                            $link = $item['url_vn'];
+                            if ($item['category_id'] > 0) {
+                                $catObj = new Categories(Categories::getCatByID($item['category_id']));
+                                $link = $catObj->getLink();
+                            }
+                        ?>
+                            <li><a href="<?php echo $link; ?>"><?php echo $name; ?></a></li>
+                        <?php
+                        }
+                        ?>
                      </ul>
                   </div>
                </div>
@@ -26,185 +34,30 @@
             <div class="accordion-group">
                <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"  href="#collapseTwo">
-                     night cream
+                     Thương hiệu
                   </a>
                </div>
-               <div id="collapseTwo" class="accordion-body collapse in">
+               <div id="collapseTwo" class="accordion-body collapse ">
                   <div class="accordion-inner">
-
                      <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
+                         <?php
+                         $listDanhMuc = ImagesGroup::get_img_by_cid(10,100);
+                         foreach($listDanhMuc as $item) {
+                             $name = $item['name_vn'];
+                             $link = $item['url_vn'];
+                             if ($item['category_id'] > 0) {
+                                 $catObj = new Categories(Categories::getCatByID($item['category_id']));
+                                 $link = $catObj->getLink();
+                             }
+                             ?>
+                             <li><a href="<?php echo $link; ?>"><?php echo $name; ?></a></li>
+                         <?php
+                         }
+                         ?>
                      </ul>
                   </div>
                </div>
             </div>
-
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse3">
-                     serum
-                  </a>
-               </div>
-               <div id="collapse3" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse4">
-                     eye cream
-                  </a>
-               </div>
-               <div id="collapse4" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse5">
-                     make-up removal
-                  </a>
-               </div>
-               <div id="collapse5" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse6">
-                     skin toning
-                  </a>
-               </div>
-               <div id="collapse6" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse7">
-                     peeling
-                  </a>
-               </div>
-               <div id="collapse7" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse8">
-                     care paragraph
-                  </a>
-               </div>
-               <div id="collapse8" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse9">
-                     sets
-                  </a>
-               </div>
-               <div id="collapse9" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse10">
-                     bestsellers
-                  </a>
-               </div>
-               <div id="collapse10" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">day cream</a></li>
-                        <li><a href="#">night cream</a></li>
-                        <li><a href="#">serum</a></li>
-                        <li><a href="#">eye cream</a></li>
-                        <li><a href="#">make-up removal</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
          </div>
 
 
@@ -218,7 +71,7 @@
             <div class="accordion-group">
                <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"  href="#collapse11">
-                     sort by
+                     Sắp xếp theo
                   </a>
                </div>
                <div id="collapse11" class="accordion-body collapse in">
