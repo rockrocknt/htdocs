@@ -144,7 +144,10 @@
         public function getImageNoThumb() {
             return GetImage($this->img);
         }
-        
+        public function getImage2() {
+            return $this->img;
+        }
+
         public function isHasImage() {
             return file_exists($this->img)?true:false;
         }
@@ -185,6 +188,18 @@
             }
 
             return false;
+        }
+        public function getShortDes()
+        {
+            $obj = $this->obj;
+
+            if ($obj['descs_en'] != "")
+
+            {
+                return $obj['descs_en'];
+            }
+
+            return "";
         }
         public  function laSanPhamBo()
         {
