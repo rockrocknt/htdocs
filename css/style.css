@@ -63,7 +63,7 @@ h5,
 .logo .text,
 .flex-caption .nav-holder a,button
 {
-    font-family: "Raleway";
+    font-family: "Open Sans", sans-serif;
 
 
 }
@@ -238,7 +238,7 @@ h5,
     padding: 15px 40px !important; 
 }
 .cusmo-btn{
-     font-family: "Raleway"!important;
+     font-family: "Open Sans"!important;
     background-color: #FFBB00;
     border-radius: 30px;
     border:none;
@@ -1090,7 +1090,7 @@ position: absolute;
 .products-list {
     margin-top: 33px;
 }
-.list-item h1 {
+.list-item h1,.list-item h3 {
 font-size: 17px;
 text-transform: uppercase;
     line-height: 22px;
@@ -1849,3 +1849,10 @@ margin-top: 2px;
 .top-cat-menu.dropdown{
         display: none;
     }
+.pagination-container .pagination li.Active a {
+    color: #FFBB00;
+    font-weight: bold;
+}
+.marginLessBreadCum {
+    margin-top: -20px;
+}

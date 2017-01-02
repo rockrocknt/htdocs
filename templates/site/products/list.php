@@ -3,9 +3,7 @@ global $cat, $lg,$currentcat, $products, $FullUrl, $plpage;
 $_SESSION['CONTINUE_SHOPPING_URL'] = GetFullUrl();
 $currentcat = currentCat();
 $cat = new Categories($currentcat);
-
 ?>
-<script type="text/javascript" src="/js/bootstrap-slider.js"></script>
 <section class="section-two-columns">
     <div class="container">
         <div class="row-fluid">

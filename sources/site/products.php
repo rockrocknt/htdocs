@@ -304,7 +304,7 @@ function ShowList()
 
 
     $typesort = getquery('typesort');
-    if ($typesort == "") $typesort =4;
+    if ($typesort == "") $typesort = getSortDefault();
 
  //   $sqlmain = "select * from products where active=1 and name_$lg<>'' and (( cid=".$cat->getID().") or (tag_id_1 = ".$cat_id." or tag_id_2 = ".$cat_id." or tag_id_3 = ".$cat_id." or tag_id_4 = ".$cat_id." or tag_id_5 = ".$cat_id.")   )";
  //   $sql = $sqlmain."   order by `price` desc";
@@ -351,7 +351,7 @@ function ShowList()
 	
 	// page con hang va tim kiem nang cao
 	if (!in_array($cat->getDisplayType(), array(2,4))) {
-		$sqlmain .= " and ( cid=".$currentCid." or cid2 = ".$currentCid. " or cid3 = ".$currentCid ." or cid4 = ".$currentCid;
+		$sqlmain .= " and ( cid=".$currentCid;
 		$sqlmain .= ")";		
 	}
 	if ($cat->getDisplayType() == 4 ) {
@@ -421,6 +421,7 @@ function ShowList()
       $columnId = " `products_attributes`.product_id";
     }
 	*/
+
     if ($typesort==1)
     {
         $sql = $sqlmain."  order by  `is_available` desc,  $columnId desc";
@@ -478,7 +479,8 @@ function ShowList()
     //var_dump($result);
     $plpage = $result['paging'];
     $products = $result['list'];
-	
+	global $listProduct;
+    $listProduct = $products;
 	$countTotal = $rowCount[0]['count'];
 	if (!empty($attributes)) {
 		$countTotal = count($rowCount);

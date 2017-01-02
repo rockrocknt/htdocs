@@ -861,7 +861,7 @@ function plpage_seo_sort($sqlstmt, $page, $set_per_page)
         if ($i==$page)
 		{
 			$first = "";
-            $str .= "<li$first class='Active'>$i</li>";
+            $str .= "<li$first class='Active'><a>$i</a></li>";
 		}
         else {
             $str .= "<li$first><a href=\"". $my_url . ($i==1? '' : ("&page=".$i))   ."\">$i</a></li>";
@@ -1493,4 +1493,14 @@ function reArrayFiles(&$file_post) {
     }
 
     return $file_ary;
+}
+function getSortDefault()
+{
+    return 1;
+    /*
+     * 1 : moi nhat
+     * 2 : xem nhieu nhat
+     * 3 : gia Giam dan
+     * 4 : gia tang dan
+     */
 }
