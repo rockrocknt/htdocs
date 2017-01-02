@@ -66,6 +66,7 @@
 <script type="text/javascript" src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
 <script type="text/javascript" src="/js/bootstrap-slider.js"></script>
 <script type="text/javascript" src="/js/script.js"></script>
+<script type="text/javascript" src="/js/cart.js"></script>
 </body>
 
 </html>

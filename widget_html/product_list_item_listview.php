@@ -23,7 +23,9 @@
     <?php }; ?>
 
     <div class="buttons-holder">
-        <a class="cusmo-btn add-button" href="#">MUA NGAY</a>
+        <a class="cusmo-btn add-button" href="#"
+           onclick="addtocartandredirect('','<?php echo $productObj->getID(); ?>','qty');return false;"
+            >MUA NGAY</a>
         <a class="cusmo-btn gray add-button" href="<?php echo $productObj->getLink(); ?>">XEM NGAY</a>
         <?php /* ?>
         <a class="add-to-wishlist-btn" href="#"><i class="icon-plus"></i> Add to wishlist</a>
