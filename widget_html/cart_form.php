@@ -16,7 +16,11 @@
                             <div class="controls">
                                 <label class="form-label ">Họ tên</label>
 
-                                <input id="cname" name="name" size="25" class="required cusmo-input span12">
+                                <input id="firstname" name="name" size="25"
+                                       value="<?php
+                                       echo getsession('firstname')
+                                       ?>"
+                                       class="required cusmo-input span12">
 
                             </div>
                         </div>
@@ -25,41 +29,29 @@
 
                             <div class="controls">
                                 <label class="form-label">Email</label>
-                                <input id="cemail" name="mail" class="required cusmo-input span12">
+                                <input id="email" name="mail" class="required cusmo-input span12"
+                                       value="<?php
+                                       echo getsession('email')
+                                       ?>"
+                                    >
 
                             </div>
                         </div>
 
-                        <div class="control-group  span12">
-                            <div class="controls">
-                                <label class="form-label">Số điện thoại</label>
-                                <input id="cemail" name="mail" class="required cusmo-input span12">
 
-                            </div>
-                        </div>
-                        <div class="control-group  span12">
+                        <div class="control-group inline-block  span12" style="margin-left: 0px;">
                             <div class="controls">
                                 <label class="form-label">Địa chỉ đặt hàng</label>
-                                <input id="cemail" name="mail" class="required cusmo-input span12">
+                                <input id="address" name="mail" class="required cusmo-input span12"
+                                       value="<?php
+                                       echo getsession('address_giaohang')
+                                       ?>"
+                                    >
 
                             </div>
                         </div>
 
-                        <div class="control-group">
 
-                            <div class="controls">
-                                <label class="form-label">Ghi chú khi đặt hàng</label>
-
-                                <textarea id="ccomment" name="msj" rows="5" cols="5" class="required span12 cusmo-input"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="text-right">
-                            <input class="submit cusmo-btn narrow" value="SUBMIT" type="submit">
-                        </div>
-                        <div id="loading" class="pull-right">
-                            <img alt="" src="images/loader.gif">
-                        </div>
 
 
                     </form>
@@ -72,23 +64,36 @@
 
                 <form class="contact-form" method="post" novalidate="novalidate">
 
-                    <div class="control-group inline-block span6">
+                    <div class="control-group inline-block span12">
 
                         <div class="controls">
-                            <label class="form-label ">Họ tên</label>
+                            <label class="form-label ">Số điện thoại</label>
 
-                            <input id="cname" name="name" size="25" class="required cusmo-input span12">
+                            <input id="phone" name="name" size="25" class="required cusmo-input span12"
+                                <?php
+                                echo getsession('phone');
+                                ?>
+                                >
 
                         </div>
                     </div>
 
-                    <div class="control-group inline-block span6">
+                    <div class="control-group">
 
                         <div class="controls">
-                            <label class="form-label">Email</label>
-                            <input id="cemail" name="mail" class="required cusmo-input span12">
+                            <label class="form-label">Ghi chú thêm</label>
 
+                            <textarea id="note" name="msj" rows="5" cols="5" class="required span12 cusmo-input"></textarea>
                         </div>
+                    </div>
+
+                    <div class="text-right">
+                        <input class="submit cusmo-btn narrow"
+                               onclick="finishcheckout('');return false;"
+                               value="SUBMIT" type="submit">
+                    </div>
+                    <div id="loading" class="pull-right">
+                        <img alt="" src="/images/loader.gif">
                     </div>
                 </form>
             </div>

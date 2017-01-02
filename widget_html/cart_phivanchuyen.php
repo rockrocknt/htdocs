@@ -1,7 +1,6 @@
 <tr>
     <td>
-        <div class="thumb">
-        </div>
+
     </td>
     <td>
         <div >
@@ -167,7 +166,7 @@
         });
     }
     $(document).ready(function() {
-        changeTinh();
+    //    changeTinh();
     });
     function changeqtt(fullUrl, qtyId, productId)
     {

@@ -294,6 +294,7 @@ if($('#write-review-text').length>0){
 
     checkContactForm();
     function checkContactForm() {
+        return false;
         if ($(".contact-form").length > 0) {
 
 
