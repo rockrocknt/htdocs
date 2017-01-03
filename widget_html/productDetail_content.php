@@ -9,7 +9,7 @@
 
     <div class="tab-content">
         <div id="description" class=" active tab-pane ">
-            <?php echo $product->getContent(); ?>
+            <?php echo str_replace(DOMAIN, "", $product->getContent()); ?>
         </div>
 
         <div id="how-to-use" class=" tab-pane ">

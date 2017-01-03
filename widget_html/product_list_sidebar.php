@@ -64,9 +64,10 @@
       </div> 
 
       <hr>
-
+      <?php
+        global $do, $tpl; ?>
+       <?php if (($do == 'products') && ($tpl == 'list')) : ?>
       <div class="accordion-widget filter-accordions">
-
          <div class="accordion" >
             <div class="accordion-group">
                <div class="accordion-heading">
@@ -78,62 +79,17 @@
                   <div class="accordion-inner">
 
                      <ul>
-                        <li><a href="#">popoular</a></li>
-                        <li><a href="#">lowest price</a></li>
-                        <li><a href="#">largest price</a></li>
-                        <li><a href="#">A-Z</a></li>
-                        <li><a href="#">Z-A</a></li>
+                        <li><a href="#">Mới nhất</a></li>
+                        <li><a href="#">Giá từ thấp đến cao</a></li>
+                        <li><a href="#">Giá từ cao đến thấp</a></li>
+                        <li><a href="#">Xem nhiều nhất</a></li>
                      </ul>
                   </div>
                </div>
             </div>
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse12">
-                     capacity
-                  </a>
-               </div>
-               <div id="collapse12" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-
-                     <ul>
-                        <li><a href="#">30 ml</a></li>
-                        <li><a href="#">40 ml</a></li>
-                        <li><a href="#">60 ml</a></li>
-                        <li><a href="#">150 ml</a></li>
-                        <li><a href="#">200 ml</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-
-
-            <div class="accordion-group">
-               <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapse13">
-                     price from-to
-                  </a>
-               </div>
-               <div id="collapse13" class="accordion-body collapse in price-range">
-                  <div class="accordion-inner price-range-holder">
-
-                     <input type="text" class="price-slider span12" value="" >
-                     <div class="min-value">
-                        $100
-                     </div>
-                     <div class="max-value">
-                        $700
-                     </div>
-                  </div>
-               </div>
-            </div>
-
-
-
          </div>
+      </div>
+       <?php endif; ?>
 
-
-      </div> 
    </div>
 </div>
