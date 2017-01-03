@@ -11,16 +11,7 @@
     <div class="desc">
         <?php echo $productObj->getShortDes(); ?>
     </div>
-    <?php if ($productObj->dangKhuyenMai()) { ?>
-    <div class="price">
-        <span><?php echo formatPrice($productObj->getPrice()); ?></span>
-        <span class="old"><?php echo formatPrice($productObj->getPriceSale()); ?></span>
-    </div>
-    <?php } else { ?>
-    <div class="price">
-        <span><?php echo formatPrice($productObj->getPrice()); ?></span>
-    </div>
-    <?php }; ?>
+    <?php include "widget_html/product_list_item_gia.php"; ?>
 
     <div class="buttons-holder">
         <a class="cusmo-btn add-button" href="#"

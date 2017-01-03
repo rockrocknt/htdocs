@@ -14,9 +14,12 @@
         <hr>
         <div class="info-holder">
            <?php /* <h4>Product ID: 6254362</h4> */ ?>
-            <?php
-           echo $product->getShortDes();
+           <p>
+           <?php
+           $empty = empty(strip_tags($product->getShort()));
+           echo (!$empty) ? $product->getShort() : strip_tags($product->getShortDes());
             ?>
+           </p>
         </div>
         <hr>
         <div class="drop-downs-holder">
@@ -40,7 +43,7 @@
 
             <div class="drop-selector">
                 <span>Số lượng mua</span>
-                <select class="chosen-select">
+                <select class="chosen-select" id="qty">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -57,14 +60,15 @@
 
         <hr>
         <div class="price-holder">
-            <div class="price">
-                <span>$99.00</span>
-                <span class="old">$240.00</span>
-            </div>
+            <?php
+            $productObj = $product;
+            include "widget_html/product_list_item_gia.php"; ?>
         </div>
 
         <div class="buttons-holder">
-            <a class="cusmo-btn add-button" href="#">MUA NGAY</a>
+            <a class="cusmo-btn add-button"
+               onclick="addtocartandredirect('','<?php echo $product->getID(); ?>','qty');return false;"
+               href="#">MUA NGAY</a>
             <?php /*
             <a class="add-to-wishlist-btn" href="#"><i class="icon-plus"></i> Add to wishlist</a>
             */ ?>

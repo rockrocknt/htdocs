@@ -839,7 +839,7 @@ function Editsm()
 
 
 
-    $arr['video'] = isset($_POST["video"])?$_POST["video"]:'';
+    //$arr['video'] = isset($_POST["video"])?$_POST["video"]:'';
 
 
 
@@ -849,8 +849,8 @@ function Editsm()
     $arr['keyword_en'] = SafeFormValue('keyword_en');
     $arr['des_vn'] = SafeFormValue('des_vn');
     $arr['des_en'] = SafeFormValue('des_en');
-    $arr['des_vn_char']= SafeFormValue('des_vn_char');
-    $arr['des_en_char']= SafeFormValue('des_en_char');
+    //$arr['des_vn_char']= SafeFormValue('des_vn_char');
+    //$arr['des_en_char']= SafeFormValue('des_en_char');
 
     $name_tags = SafeFormValue('tags');
     $unique_key_tags = cmsFunction::createTag($name_tags);
