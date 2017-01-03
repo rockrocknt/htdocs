@@ -306,41 +306,9 @@
 
 
 
-            $wheretag = "(";
-
-            if ($obj['tag_id_1'] > 0){
-                $wheretag .= "`tag_id_1`='".$obj['tag_id_1'];
-            }
-
-            if ($obj['tag_id_2'] > 0){
-                if ($wheretag != "(")
-                    $wheretag .= " or `tag_id_2`='".$obj['tag_id_2'];
-                else
-                    $wheretag .= "`tag_id_2`='".$obj['tag_id_2'];
-            }
-
-            if ($obj['tag_id_2'] > 0){
-                if ($wheretag != "(")
-                    $wheretag .= " or `tag_id_2`='".$obj['tag_id_2'];
-                else
-                    $wheretag .= "`tag_id_2`='".$obj['tag_id_2'];
-            }
-
-            if ($obj['tag_id_2'] > 0){
-                if ($wheretag != "(")
-                    $wheretag .= " or `tag_id_2`='".$obj['tag_id_2'];
-                else
-                    $wheretag .= "`tag_id_2`='".$obj['tag_id_2'];
-            }
-
-            if ($obj['tag_id_5'] > 0){
-                if ($wheretag != "(")
-                    $wheretag .= " or `tag_id_5`='".$obj['tag_id_5'];
-                else
-                    $wheretag .= " `tag_id_5`='".$obj['tag_id_5'];
-            }
-            $wheretag .= ")";
-            if ($wheretag == "()")
+            $wheretag = "";
+            //if ($wheretag == "()")
+            if (false)
             {
                 $sql = "select * from products where active=1 and name_$lg<>''  order by id desc limit $num_older";
 

@@ -1,3 +1,76 @@
+
+    <div class="product-info-box">
+        <div class="star-holder">
+            <strong>Rating</strong>
+            <div class="star" data-score="3"></div>
+
+            <div class="review-counter">
+                2 reviews
+
+            </div>
+        </div>
+        <hr>
+        <div class="info-holder">
+            <h4>Product ID: 6254362</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia fermentum diam fringilla interdum. Morbi non ipsum nunc. Proin congue nisi vitae sapien facilisis, ac semper tellus tincidunt. Proin tristique sapien id nunc suscipit venenatis vitae non magna. Nulla tempor pretium.
+            </p>
+        </div>
+        <hr>
+        <div class="drop-downs-holder">
+            <div class="drop-selector capacity-selector">
+                <span>Pick capacity</span>
+
+                <select class="chosen-select">
+                    <option value="20ml">20 ml</option>
+                    <option value="30ml">30 ml</option>
+                    <option value="40ml">40 ml</option>
+                    <option value="50ml">50 ml</option>
+                    <option value="60ml">60 ml</option>
+                    <option value="70ml">70 ml</option>
+                    <option value="80ml">80 ml</option>
+                    <option value="90ml">90 ml</option>
+                    <option value="100ml">100 ml</option>
+                </select>
+
+            </div>
+
+            <div class="drop-selector">
+                <span>amount</span>
+                <select class="chosen-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+
+                </select>
+            </div>
+        </div>
+
+        <hr>
+        <div class="price-holder">
+            <div class="price">
+                <span>$99.00</span>
+                <span class="old">$240.00</span>
+            </div>
+        </div>
+        <div class="buttons-holder">
+            <a class="cusmo-btn add-button" href="#">add to cart</a>
+
+            <a class="add-to-wishlist-btn" href="#"><i class="icon-plus"></i> Add to wishlist</a>
+        </div>
+    </div>
+
+
+
+
+
+<?php return; ?>
 <div class="summary entry-summary">
 
                             <h1 itemprop="name" class="product_title entry-title primaryColor"><?=$name?></h1>

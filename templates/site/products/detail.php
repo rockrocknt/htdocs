@@ -1,4 +1,41 @@
 <?php
+global $FullUrl,$catSanPham, $prefix_url, $lg, $product,$title_bar;
+
+$relateProducts = $product->getRelateNew();
+$currentcat= Categories::getCatByID($product->getCID());
+
+
+$customfields = $product->getCustomField();
+$showcomment = Info::getInfoField('showcomment');
+
+$proObj = $product->obj;
+$catSanPham['cid_menu_left'] = $proObj['cid_cua_groupcha'];
+
+$name = $product->getName();
+$code = $product->getCode();
+$price = $product->getPrice();
+$id = $product->getID();
+$content = $product->getContent();
+$tags = $product->getTag();
+$img = $FullUrl."/".$product->getImageNoThumb();
+
+$cat = new Categories($currentcat);
+?>
+
+<section class="section-two-columns">
+    <div class="container">
+        <div class="row-fluid">
+            <?php include "widget_html/product_list_sidebar.php"; ?>
+            <?php include "widget_html/product_detail.php"; ?>
+        </div>
+    </div>
+</section>
+
+<link href="/css/chosen.css" rel="stylesheet">
+<script type="text/javascript" src="/js/chosen.jquery.min.js"></script>
+
+<?php
+return;
 	global $FullUrl,$catSanPham, $prefix_url, $lg, $product,$title_bar;
 
 	$relateProducts = $product->getRelateNew();

@@ -23,6 +23,7 @@
     <link  rel="stylesheet" href="/css/style.css">
     <link  rel="stylesheet" href="/css/responsive.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>
 </head>
 <body class="homepage2">
 <div class="wrapper">

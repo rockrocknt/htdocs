@@ -198,7 +198,7 @@ if($('#write-review-text').length>0){
             controlNav: "thumbnails"
         });
     }
-
+/*
     if ($('.star').length > 0) {
         $('.star').raty({
             starOff: 'images/star-off.png',
@@ -208,7 +208,7 @@ if($('#write-review-text').length>0){
             }
         });
     }
-
+*/
 
 
     setupHomeSlider();
@@ -292,7 +292,7 @@ if($('#write-review-text').length>0){
 
 
 
-    checkContactForm();
+//    checkContactForm();
     function checkContactForm() {
         return false;
         if ($(".contact-form").length > 0) {

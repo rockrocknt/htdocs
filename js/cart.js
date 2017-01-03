@@ -138,7 +138,7 @@ function checkcoupon(fullUrl,idInputCoupon)
 
 function finishcheckout(fullUrl)
 {
-    //  alert('helo get_giaohang');
+    //  alert('helo get_giaohang'); IsEmail
     if (!trueform()) return false;
     $('#loading').toggle();
     $('.continue').hide();
@@ -185,12 +185,14 @@ function trueform()
         return false;
     }
     $('#email').val( jQuery.trim( $('#email').val() ) );
+
     if (!IsEmail($('#email').val()))
     {
         alert("Nhập email đúng!");
         $('#email').focus()
         return false;
     }
+
     if ($('#phone').val() == "")
     {
         $('#phone').focus()
@@ -202,13 +204,5 @@ function trueform()
         $('#address').focus()
         return false;
     }
-
-
-
-
-
-
-
     return true;
-
 }

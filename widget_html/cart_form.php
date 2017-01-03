@@ -29,7 +29,10 @@
 
                             <div class="controls">
                                 <label class="form-label">Email</label>
-                                <input id="email" name="mail" class="required cusmo-input span12"
+                                <input id="email"
+                                       name="mail"
+                                       class="required cusmo-input span12"
+                                       type="email"
                                        value="<?php
                                        echo getsession('email')
                                        ?>"
@@ -62,7 +65,7 @@
 
                 <div class="message-box"></div>
 
-                <form class="contact-form" method="post" novalidate="novalidate">
+                <form class="contact-form">
 
                     <div class="control-group inline-block span12">
 

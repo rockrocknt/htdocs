@@ -1,5 +1,18 @@
-<?php 
-
+<div class="flexslider product-gallery">
+    <ul class="slides">
+        <li data-thumb="/images/p1.jpg">
+            <img alt=""  src="/images/p1.jpg" />
+        </li>
+        <li data-thumb="/images/p2.jpg">
+            <img alt=""  src="/images/p2.jpg" />
+        </li>
+        <li data-thumb="/images/p3.jpg">
+            <img alt="" src="/images/p3.jpg" />
+        </li>
+    </ul>
+</div>
+<?php
+return;
 global $lg;
 		$imagesList = ImagesGroup::getImagesByProductID($product->getID());
 		$imageMain = $img;

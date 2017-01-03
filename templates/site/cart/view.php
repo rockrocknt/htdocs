@@ -16,6 +16,13 @@
         </ul>
     </div>
 </div>
+<?php
+$catThankYou = new Categories(Categories::getCatBycate_type_ID(3));
+
+if (empty($catThankYou->id)) {
+    echo 'CHƯA CÓ TRANG CÁM ƠN';
+}
+?>
 <section class="section-shopping-cart" id="pagecart">
 </section> <!-- <div class=" checkout-cart-index"> -->
 
