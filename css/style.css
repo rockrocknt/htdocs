@@ -1863,3 +1863,6 @@ margin-top: 2px;
 .none {
     display: none;
 }
+.accordion-inner .active {
+    color: #254E7B;
+}

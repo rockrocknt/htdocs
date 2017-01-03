@@ -1,56 +1,40 @@
+<?php
+$num = cart::getQuantity();
+if ($num < 1) return; ?>
 <ul class="dropdown-menu" >
+    <?php
+    $listPro = cart::getCart();
+    for($i=0;$i<count($listPro);$i++)
+    {
+    $product3 = $listPro[$i];
+    $productId = $product3['id'];
+    $productObj = $product3["productObj"];
+    ?>
     <li>
         <div class="basket-item">
             <div class="row-fluid">
                 <div class="span4">
                     <div class="thumb">
-                        <img alt="" src="images/p1.jpg" />
+                        <img src='<?=DOMAINIMAGE."/". $product3["img"]?>' />
                     </div>
                 </div>
                 <div class="span8">
-                    <div class="title">Blueberry</div>
-                    <div class="price">$270.00</div>
+                    <div class="title"><?=($productObj->getName())?></div>
+                    <div class="price"><?=formatPrice($productObj->getPrice())?></div>
                 </div>
             </div>
+            <?php /*
             <a class="close-btn" href="#"></a>
+            */ ?>
         </div>
     </li>
+    <?php
+    }
+    ?>
 
-    <li>
-        <div class="basket-item">
-            <div class="row-fluid">
-                <div class="span4">
-                    <div class="thumb">
-                        <img alt="" src="images/p2.jpg" />
-                    </div>
-                </div>
-                <div class="span8">
-                    <div class="title">Versache</div>
-                    <div class="price">$120.00</div>
-                </div>
-            </div>
-            <a class="close-btn" href="#"></a>
-        </div>
-    </li>
 
-    <li>
-        <div class="basket-item">
-            <div class="row-fluid">
-                <div class="span4">
-                    <div class="thumb">
-                        <img alt="" src="images/p3.jpg" />
-                    </div>
-                </div>
-                <div class="span8">
-                    <div class="title">Dark Shadow</div>
-                    <div class="price">$99.99</div>
-                </div>
-            </div>
-            <a class="close-btn" href="#"></a>
-        </div>
-    </li>
 
     <li class="checkout">
-        <a href="shopping-cart.html" class="cusmo-btn">checkout</a>
+        <a href="/xem-gio-hang.html" class="cusmo-btn">Xem Giỏ Hàng</a>
     </li>
 </ul>
