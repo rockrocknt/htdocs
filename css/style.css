@@ -1860,3 +1860,6 @@ margin-top: 2px;
     color: #b22222;
     font-weight: bold;
 }
+.none {
+    display: none;
+}

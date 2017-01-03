@@ -1,3 +1,38 @@
+<?php
+$relateProducts = $product->getRelatedProducts();
+$product_lists = $relateProducts;
+$proPerRow = 3;
+$row             = ceil (count ($product_lists) / $proPerRow);
+$k               = 0;
+$limit           = 1;
+
+?>
+<?php if (!empty ($product_lists)): ?>
+    <?php for ($i = 0; $i < $row; $i++): ?>
+<div class="row-fluid">
+    <?php for ($j = $k; $j < count ($product_lists); $j++):
+        $productObj = new products($product_lists[$j]);
+        ?>
+        <div class="span4">
+            <?php include "widget_html/product_list_item.php"; ?>
+        </div>
+        <?php
+        if ($limit >= $proPerRow)
+        {
+            $j++;
+            $k     = $j;
+            $limit = 1;
+            break;
+        }
+        $limit ++;
+        ?>
+    <?php endfor; ?>
+</div>
+    <?php endfor; ?>
+<?php endif; ?>
+<?php
+return;
+?>
 <!-- productDetail_relatedProducts -->
 <?php 
 global $product;

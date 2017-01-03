@@ -16,55 +16,11 @@
       </div>
       <?php require_once "widget_html/productDetail_content.php"; ?>
       <div class="middle-header-holder">
-         <div class="middle-header">you will also like</div>
+         <div class="middle-header">Có thể bạn thích</div>
       </div>
       <div class="products-holder related-products">
-         <div class="row-fluid">
-            <div class="span4">
-               <div class="product-item">
+         <?php require_once "widget_html/productDetail_relatedProducts.php"; ?>
 
-                  <img alt="" src="images/p1.jpg" />
-                  <h1>versace</h1>
-                  <div class="tag-line">
-                     <span>yellow diamond</span>
-                     <span>toilet water spray</span>
-                  </div>
-                  <div class="price">
-                     $270.00
-                  </div>
-                  <a class="cusmo-btn add-button" href="#">add to cart</a>
-
-               </div>
-            </div>
-            <div class="span4">
-               <div class="product-item">
-                  <img alt="" src="images/p2.jpg" />
-                  <h1>estee lauder</h1>
-                  <div class="tag-line">
-                     <span>yellow diamond</span>
-                     <span>toilet water spray</span>
-                  </div>
-                  <div class="price">
-                     $122.00
-                  </div>
-                  <a class="cusmo-btn add-button" href="#">add to cart</a>
-               </div>
-            </div>
-            <div class="span4">
-               <div class="product-item">
-                  <img alt="" src="images/p3.jpg" />
-                  <h1>burberry</h1>
-                  <div class="tag-line">
-                     <span>yellow diamond</span>
-                     <span>toilet water spray</span>
-                  </div>
-                  <div class="price">
-                     $120.00
-                  </div>
-                  <a class="cusmo-btn add-button" href="#">add to cart</a>
-               </div>
-            </div>
-         </div>
       </div>
    </div>
 </div>

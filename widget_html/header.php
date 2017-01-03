@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="dropdown">
                                     <a class="dropdown-toggle" data-hover="dropdown" href="#">
-                                        <img alt="basket" src="images/icon-basket.png" />
+                                        <img alt="basket" src="/images/icon-basket.png" />
                                     </a>
                                     <ul class="dropdown-menu" >
                                         <li>
