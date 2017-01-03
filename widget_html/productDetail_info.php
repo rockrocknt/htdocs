@@ -1,5 +1,6 @@
 
     <div class="product-info-box">
+        <?php /*
         <div class="star-holder">
             <strong>Rating</strong>
             <div class="star" data-score="3"></div>
@@ -9,15 +10,17 @@
 
             </div>
         </div>
+        */ ?>
         <hr>
         <div class="info-holder">
-            <h4>Product ID: 6254362</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia fermentum diam fringilla interdum. Morbi non ipsum nunc. Proin congue nisi vitae sapien facilisis, ac semper tellus tincidunt. Proin tristique sapien id nunc suscipit venenatis vitae non magna. Nulla tempor pretium.
-            </p>
+           <?php /* <h4>Product ID: 6254362</h4> */ ?>
+            <?php
+           echo $product->getShortDes();
+            ?>
         </div>
         <hr>
         <div class="drop-downs-holder">
+            <?php /*
             <div class="drop-selector capacity-selector">
                 <span>Pick capacity</span>
 
@@ -32,11 +35,11 @@
                     <option value="90ml">90 ml</option>
                     <option value="100ml">100 ml</option>
                 </select>
-
             </div>
+            */ ?>
 
             <div class="drop-selector">
-                <span>amount</span>
+                <span>Số lượng mua</span>
                 <select class="chosen-select">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -59,10 +62,12 @@
                 <span class="old">$240.00</span>
             </div>
         </div>
-        <div class="buttons-holder">
-            <a class="cusmo-btn add-button" href="#">add to cart</a>
 
+        <div class="buttons-holder">
+            <a class="cusmo-btn add-button" href="#">MUA NGAY</a>
+            <?php /*
             <a class="add-to-wishlist-btn" href="#"><i class="icon-plus"></i> Add to wishlist</a>
+            */ ?>
         </div>
     </div>
 

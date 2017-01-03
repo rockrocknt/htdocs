@@ -1,13 +1,21 @@
+<?php
+global $lg;
+$imagesList = ImagesGroup::getImagesByProductID($product->getID());
+$imageMain = $img;
+?>
 <div class="flexslider product-gallery">
     <ul class="slides">
-        <li data-thumb="/images/p1.jpg">
-            <img alt=""  src="/images/p1.jpg" />
+        <li data-thumb="<?=DOMAINIMAGE?>/<?php echo $product->getImage2(); ?>">
+            <img alt=""  src="<?=DOMAINIMAGE?>/<?php echo $product->getImage2(); ?>" />
         </li>
-        <li data-thumb="/images/p2.jpg">
-            <img alt=""  src="/images/p2.jpg" />
-        </li>
-        <li data-thumb="/images/p3.jpg">
-            <img alt="" src="/images/p3.jpg" />
+        <?php
+        for ($i = 0; $i < count($imagesList); $i++) {
+        if (empty($imagesList[$i])) continue;
+        ?>
+            <li data-thumb="<?=DOMAINIMAGE?>/<?php echo $item['img_'.$lg]; ?>">
+                <img alt=""  src="<?=DOMAINIMAGE?>/<?php echo $item['img_'.$lg]; ?>" />
+            </li>
+        <?php } ?>
         </li>
     </ul>
 </div>

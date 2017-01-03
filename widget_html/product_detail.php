@@ -11,7 +11,7 @@
             <?php require_once "widget_html/productDetail_images.php"; ?>
          </div>
          <div class="span5">
-          <?php require_once "widget_html/productDetail_images.php"; ?>
+          <?php require_once "widget_html/productDetail_info.php"; ?>
          </div>
       </div>
       <div class="product-tabs">
