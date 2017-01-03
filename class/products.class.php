@@ -157,7 +157,12 @@
         }
         
         public function getContent() {
-            $content = str_replace('http://hoahongleo.net', '', $this->content);
+            //$content = str_replace('', '', $this->content);
+            $content = $this->content;
+            if (empty($this->content)) {
+                $obj = $this->obj;
+                $content = $obj['descs_vn'];
+            }
             return $content;
         }
         

@@ -16,7 +16,8 @@
            <?php /* <h4>Product ID: 6254362</h4> */ ?>
            <p>
            <?php
-           $empty = empty(strip_tags($product->getShort()));
+           $short = $product->getShort();
+           $empty = empty(strip_tags($short));
            echo (!$empty) ? $product->getShort() : strip_tags($product->getShortDes());
             ?>
            </p>
