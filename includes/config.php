@@ -1,20 +1,43 @@
 <?php
 // This is new config file, written by Mr.Holmes!
 global $key, $email, $mau;
-include "key.php";
-global $db, $FullUrl;
-$ip = $_SERVER['REMOTE_ADDR'] ;
+$key = "4ce66c9f2849705ab6711cc7adc4dd62";
+$email = 'vxuanlong@gmail.vn';
+$mau = 'ITop001';
 
-if ($ip != "127.0.0.1")
+
+define('SUB_DOMAIN', 'http://demo.myphamchonam.com/');
+define('DOMAIN', 'http://www.myphamchonam.com');
+define('DOMAINIMAGE', 'http://www.myphamchonam.com');
+define('SUB_DOMAIN_LOCAL', 'http://localhost/koss');
+
+
+global $db, $FullUrl;
+//var_dump($_SERVER);
+$ip = $_SERVER['SERVER_NAME'] ;
+//echo $ip;
+if ($ip != "mypham.dev")
 {
+
+    $db_user = 'phannu_mpham2016';
+    $db_name = 'phannu_mpham2016';
+    $db_pass = 'Sbv1vd6Jxq';
+    $db_host = 'localhost';
+
 
 }
 include "class_mysql.php";
 
 
 
-if ($ip == "127.0.0.1")
+if ($ip == "mypham.dev")
 {
+    $db_user = 'myphamnew';
+    $db_pass = 'myphamnew';
+    $db_name = 'myphamnew';
+    $db_host = 'localhost';
+
+
     $FullUrl = "";
 }else
     $FullUrl = "";
@@ -28,4 +51,3 @@ $link = $db->db_connect($db_host, $db_user, $db_pass);
 $db->db_select_db($db_name) || die("Could not connect to SQL db");
 
 mysql_query("SET NAMES 'UTF8'");
-?>
