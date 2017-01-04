@@ -14,28 +14,31 @@ define('SUB_DOMAIN_LOCAL', 'http://localhost/koss');
 
 global $db, $FullUrl;
 //var_dump($_SERVER);
+// local
+$db_user = 'myphamnew';
+$db_pass = 'myphamnew';
+$db_name = 'myphamnew';
+$db_host = 'localhost';
 $ip = $_SERVER['SERVER_NAME'] ;
 //echo $ip;
-if ($ip != "mypham.dev")
-{
-
+if (strpos($ip, 'myphamchonam') !== false) {
     $db_user = 'phannu_mpham2016';
     $db_name = 'phannu_mpham2016';
     $db_pass = 'Sbv1vd6Jxq';
     $db_host = 'localhost';
 
-
 }
+
+
+
+
 include "class_mysql.php";
 
 
 
 if ($ip == "mypham.dev")
 {
-    $db_user = 'myphamnew';
-    $db_pass = 'myphamnew';
-    $db_name = 'myphamnew';
-    $db_host = 'localhost';
+
 
 
     $FullUrl = "";
