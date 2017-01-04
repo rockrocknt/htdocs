@@ -1504,3 +1504,9 @@ function getSortDefault()
      * 4 : gia tang dan
      */
 }
+function echoSelectActive($value1, $value2, $class)
+{
+    if ($value1 == $value2) {
+        echo $class;
+    }
+}
