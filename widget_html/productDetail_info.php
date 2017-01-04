@@ -17,9 +17,10 @@
            <p>
            <?php
            $short = $product->getShort();
-           $empty = empty(strip_tags($short));
-           echo (!$empty) ? $product->getShort() : strip_tags($product->getShortDes());
-            ?>
+          // $empty = empty(strip_tags($short));
+           //echo (!$empty) ? $product->getShort() : strip_tags($product->getShortDes());
+           echo  strip_tags($product->getShortDes());
+           ?>
            </p>
         </div>
         <hr>
