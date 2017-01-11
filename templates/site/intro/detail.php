@@ -2,6 +2,14 @@
 global $FullUrl, $prefix_url, $cat, $lg, $product, $title_bar;
 $currentcat = currentCat();
 ?>
+<section class="section-contact">
+    <div class="container">
+        <div class="row-fluid">
+            <?php  echo $cat->getContent(); ?>
+        </div>
+    </div>
+</section>
+<?php return; ?>
 <nav class="breadcrumb__wrapper">
         <div class="container">
             <ul class="breadcrumb">
