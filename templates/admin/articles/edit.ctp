@@ -1,7 +1,7 @@
 <? 
 	global $article, $tags; 
 	$temp = Info::getInfoField('showlanguage');
-	$showEnglish = $temp==1?'':'style="display:none;"';
+	$showEnglish = $temp==1?'': '';
 ?>
 
 <script type="text/javascript">
@@ -131,10 +131,10 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div class="formRow " <?=$showEnglish?>>
+        <div class="formRow " style="display:none;">
             <label>Link ngoài (EN)</label>
             <div class="formRight">
-                <input type="text" name="ext_url_en" id="ext_url_en" class="tipS " value="<?=$article['ext_url_en']?>" />
+                <input type="text" name="ext_url_en" id="ext_url_en" class="tipS " value="<?=!empty($article['ext_url_en']) ? $article['ext_url_en'] : ''; ?>" />
 
             </div>
             <div class="clear"></div>
@@ -238,7 +238,7 @@
         </div>
 
 
-        <div class="formRow none" >
+        <div class="formRow " >
             <label>product list</label>
             <div class="formRight">
                 <input type="text" name="productlist" class="tipS" value="<?=$article['productlist']?>" />
@@ -247,33 +247,181 @@
             <div class="clear"></div>
         </div>
 
-		<div class="formRow">
-			<label>Mô tả ngắn VN:</label>
-			<div class="formRight">
-				<textarea rows="8" cols="" class="tipS " name="short_vn" id="short_vn"><?=$article["short_vn"]?></textarea>
-                <span class="formNote">Đoạn mô tả ngắn tin tức sẽ hiển thị ở trang tiếng Việt</span>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="formRow" <?=$showEnglish?>>
-			<label>Mô tả ngắn EN:</label>
-			<div class="formRight">
-				<textarea rows="8" cols="" class="tipS" name="short_en"><?=$article["short_en"]?></textarea>
-                <span class="formNote">Đoạn mô tả ngắn tin tức sẽ hiển thị ở trang tiếng Anh</span>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<div class="formRow">
-			<label>Nội dung chính VN: <img src="./images/admin/question-button.png" alt="Tooltip"  class="icon_que tipS" original-title="Viết nội dung chính của tin tức sẽ hiển thị ở trang tiếng Việt"> </label>
-			<div class="formRight"><?php echo $CKEditor->editor("content_vn", $article['content_vn']);?></div>
-			<div class="clear"></div>
-		</div>
-		<div class="formRow" <?=$showEnglish?>>
-			<label>Nội dung chính EN: <img src="./images/admin/question-button.png" alt="Tooltip"  class="icon_que tipS" original-title="Viết nội dung chính của tin tức sẽ hiển thị ở trang tiếng Anh"> </label>
-			<div class="formRight"><?php echo $CKEditor->editor("content_en", $article['content_en']);?></div>
-			<div class="clear"></div>
-		</div>
+            <div class="formRow">
+                    <label>Mô tả ngắn VN:</label>
+                    <div class="formRight">
+                            <textarea rows="8" cols="" class="tipS " name="short_vn" id="short_vn"><?=$article["short_vn"]?></textarea>
+            <span class="formNote">Đoạn mô tả ngắn tin tức sẽ hiển thị ở trang tiếng Việt</span>
+                    </div>
+                    <div class="clear"></div>
+            </div>
+            <div class="formRow" <?=$showEnglish?>>
+                    <label>Mô tả ngắn EN:</label>
+                    <div class="formRight">
+                            <textarea rows="8" cols="" class="tipS" name="short_en"><?=$article["short_en"]?></textarea>
+            <span class="formNote">Đoạn mô tả ngắn tin tức sẽ hiển thị ở trang tiếng Anh</span>
+                    </div>
+                    <div class="clear"></div>
+            </div>
+            <div class="formRow">
+                    <label>Nội dung chính VN: <img src="./images/admin/question-button.png" alt="Tooltip"  class="icon_que tipS" original-title="Viết nội dung chính của tin tức sẽ hiển thị ở trang tiếng Việt"> </label>
+                    <div class="formRight"><?php echo $CKEditor->editor("content_vn", $article['content_vn']);?></div>
+                    <div class="clear"></div>
+            </div>
+            <div class="formRow" <?=$showEnglish?>>
+                    <label>Nội dung chính EN: <img src="./images/admin/question-button.png" alt="Tooltip"  class="icon_que tipS" original-title="Viết nội dung chính của tin tức sẽ hiển thị ở trang tiếng Anh"> </label>
+                    <div class="formRight"><?php echo $CKEditor->editor("content_en", $article['content_en']);?></div>
+                    <div class="clear"></div>
+            </div>
+
+        <!--Start NghiepHai Them thuoc tinh-->
+        <div class="formRow " >
+            <label>idcategory</label>
+            <div class="formRight">
+                <input type="text" name="idcategory" class="tipS" value="<?=$article['idcategory']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formRow " >
+            <label>admin_id</label>
+            <div class="formRight">
+                <input type="text" name="admin_id" class="tipS" value="<?=$article['admin_id']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formRow " >
+            <label>admin_name</label>
+            <div class="formRight">
+                <input type="text" name="admin_name" class="tipS" value="<?=$article['admin_name']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    <div class="formRow " >
+            <label>categories_displaytype_id</label>
+            <div class="formRight">
+                <input type="text" name="categories_displaytype_id" class="tipS" value="<?=$article['categories_displaytype_id']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formRow " >
+            <label>pro_link</label>
+            <div class="formRight">
+                <input type="text" name="pro_link" class="tipS" value="<?=$article['pro_link']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formRow " >
+            <label>pro_name</label>
+            <div class="formRight">
+                <input type="text" name="pro_name" class="tipS" value="<?=$article['pro_name']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formRow " >
+            <label>vote</label>
+            <div class="formRight">
+                <input type="text" name="vote" class="tipS" value="<?=$article['vote']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="formRow " >
+            <label>view</label>
+            <div class="formRight">
+                <input type="text" name="view" class="tipS" value="<?=$article['view']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>hot_news_big</label>
+            <div class="formRight">
+                <input type="text" name="hot_news_big" class="tipS" value="<?=$article['hot_news_big']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>is_contact</label>
+            <div class="formRight">
+                <input type="text" name="is_contact" class="tipS" value="<?=$article['is_contact']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>idarticle</label>
+            <div class="formRight">
+                <input type="text" name="idarticle" class="tipS" value="<?=$article['idarticle']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>note_img_vn</label>
+            <div class="formRight">
+                <input type="text" name="note_img_vn" class="tipS" value="<?=$article['note_img_vn']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>note_img_en</label>
+            <div class="formRight">
+                <input type="text" name="note_img_en" class="tipS" value="<?=$article['note_img_en']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>bonus</label>
+            <div class="formRight">
+                <input type="text" name="bonus" class="tipS" value="<?=$article['bonus']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>price</label>
+            <div class="formRight">
+                <input type="text" name="price" class="tipS" value="<?=$article['price']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>sSource</label>
+            <div class="formRight">
+                <input type="text" name="sSource" class="tipS" value="<?=$article['sSource']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>home</label>
+            <div class="formRight">
+                <input type="text" name="home" class="tipS" value="<?=$article['home']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+         <div class="formRow " >
+            <label>clear_link</label>
+            <div class="formRight">
+                <input type="text" name="clear_link" class="tipS" value="<?=$article['clear_link']?>" />
+                <span class="formNote"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!--End NghiepHai Them thuoc tinh-->
 	</div>
+
 	<div class="widget">
 		<div class="title"><img src="./images/admin/icons/dark/record.png" alt="" class="titleIcon" />
 			<h6>Nội dung SEO</h6><span class="mynotes">- Phần dành cho Google đọc</span>
