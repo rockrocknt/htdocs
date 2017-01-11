@@ -258,23 +258,7 @@
             </div>
 
 
-            <?php
-            //        } ?>
 
-            <div class="formRow ">
-                <label>Top Banner:</label>
-                <div class="formRight">
-                    <? if($_GET['act'] == 'edit' && file_exists($cat["img_topbanner"])) { ?>
-                        <img src="<?=$cat["img_topbanner"]?>" width="300" alt="" />
-                        <a href="admin.php?do=categories&act=delete_img&id=<?=$cat['id']?>&img_del=img_topbanner<?=isset($_GET['cid'])?'&cid='.$_GET['cid']:''?><?=isset($_GET['page'])?'&page='.$_GET['page']:''?>&root=1" title="Xoá ảnh">Xoá ảnh</a>
-                        <br />
-                    <? } ?>
-                    <input type="file" id="file2" name="img_topbanner" />
-                    <div class="clear"></div>
-                    <span class="formNote">Tải hình banner trên cho danh mục (ảnh đuôi JPEG, GIF , JPG , PNG)</span>
-                </div>
-                <div class="clear"></div>
-            </div>
             <div class="formRow none">
                 <label>Đường dẫn của Banner Top</label>
                 <div class="formRight">

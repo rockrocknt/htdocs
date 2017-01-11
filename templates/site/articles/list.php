@@ -55,7 +55,7 @@ $cat        = new Categories ($cur);
                }
                ?>
                <!-- End Articles -->
-
+                <div class="clear">&nbsp;</div>
                <!-- Start Pagination -->
                <div class="pagination-container masonry">
                   <nav class="pagination">

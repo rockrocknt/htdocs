@@ -375,37 +375,7 @@ function Editsm()
 			$arr["img"] = $folderRoot. $filename;
 		}
 	}
-    if(isset($_FILES["img_topbanner"]['name'] ) && $_FILES["img_topbanner"]['size']>0){
-        //them hinh moi
-        $img = $_FILES["img_topbanner"]['name'];
-        $start = strpos(strrev($img), ".");	// lay dau . sau cung
-        $type = substr($img, strlen($img)-($start+1), $start+1);
-        if (!checkUploadImages($type))
-        {
-            $_SESSION['error'] = "Ảnh danh mục không đúng định dạng!";
-        }
-        else
-        {
-            $filename = SafeFormValue('unique_key_vn');
-            if ($act == "editsm") {
-                //kiem tra va xoa hinh cu
-                $id=$_POST['id'];
-                $sqlstmt="select img_topbanner from categories where id=$id";
-                $r = $db->getRow($sqlstmt);
-                if(file_exists($r["img_topbanner"])) unlink($r["img_topbanner"]);
-            }
-            if(file_exists( $folderRoot . $filename . $type)){
-                $filename = $filename . '-' . time() . $type;
-            }
-            else
-            {
-                $filename = $filename . $type;
-            }
 
-            copy($_FILES["img_topbanner"]['tmp_name'], $folderRoot . $filename) ;
-            $arr["img_topbanner"] = $folderRoot . $filename;
-        }
-    }
 
 
 

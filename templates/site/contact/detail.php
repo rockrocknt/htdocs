@@ -1,39 +1,85 @@
-<nav class="breadcrumb__wrapper">
-        <div class="container">
-            <ul class="breadcrumb">
-                <li><a class="pathway" href="/">Trang chủ</a></li>
-                <li class="active">Liên hệ</li>	
-            </ul>
+<section class="section-contact">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span6">
+                <div class=" contact-form-holder">
+
+                    <h4>leave message</h4>
+
+                    <div class="message-box"></div>
+
+                    <form class="contact-form" method="post" novalidate="novalidate">
+
+                        <div class="control-group inline-block span6">
+
+                            <div class="controls">
+                                <label class="form-label ">Name</label>
+
+                                <input id="cname" name="name" size="25" class="required cusmo-input span12">
+
+                            </div>
+                        </div>
+
+                        <div class="control-group inline-block span6">
+
+                            <div class="controls">
+                                <label class="form-label">Email</label>
+                                <input id="cemail" name="mail" class="required cusmo-input span12">
+
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+
+                            <div class="controls">
+                                <label class="form-label">Your Message</label>
+
+                                <textarea id="ccomment" name="msj" rows="5" cols="5" class="required span12 cusmo-input"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="text-right">
+                            <input class="submit cusmo-btn narrow" value="SUBMIT" type="submit">
+                        </div>
+                        <div id="loading" class="pull-right">
+                            <img alt="" src="/images/loader.gif">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="contact-info-boxes">
+                    <?php
+                    $cate = currentCat();
+                    echo $cate['content_vn'];
+                    ?>
+                </div>
+            </div>
         </div>
-</nav>
+
+    </div>
+    <img src="/CaptchaSecurityImages.php" style="display:none;">
+
+
+
+</section>
+<?php return; ?>
+<section class="section-two-columns">
+<div class="container">
+<div class="row-fluid">
+
+</div>
+</div>
+</section>
+<?php return; ?>
 <section class="main-body">
 <div class="container">
 <div class="row">
                     <div class="col-xs-12 col-sm-6 section">
-                        <!-- Information -->
-                        <!-- Section 1 -->
-						<?php /*
-                        <div class="section_title">
-                            <h2>Liên hệ</h2>
-                        </div>
-						*/ ?>
-                        <div class="section_content" style="display: block;">
-						<div style="margin-bottom:10px; font-size:15px;">
-        <p>
-	<font color="#800080"><span style="font-size: 26px;"><b>Cửa hàng Hoa Hồng Leo Cô Long</b></span></font></p>
-<p>
-	<font color="#000000"><span style="font-size: 18px;"><b><i>Cung cấp cây giống Hoa Hồng Leo đa dạng màu</i></b></span></font></p>
-<p style="margin: 0px; padding: 0px; color: rgb(5, 5, 5); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 25px;">
-	<strong style="margin: 0px; padding: 0px;">Cửa hàng hồng leo: Số 4/2, đường số 3, KP4, P. Bình An, Quận 2, TP. Hồ Chí Minh (<em><span style="color:#b22222;">đầu đường Trần Não chạy 50m nhìn tay trái thấy ĐƯỜNG SỐ 2, chạy vào 300m sẽ thấy ĐƯỜNG SỐ 3</span></em>)</strong></p>
-<p style="margin: 0px; padding: 0px; color: rgb(5, 5, 5); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; line-height: 25px;">
-	<strong style="margin: 0px; padding: 0px;">Hotline:&nbsp;</strong><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px; color: rgb(255, 0, 0);"><strong style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">0937 932 766</span></strong>&nbsp;- Ms Dung</span></strong></p>
-<p>
-	<span style="font-size: 14px;"><strong>Thời gian làm việc từ: <span style="color:#b22222;">9h00 - 18h00</span> từ <span style="color:#b22222;">thứ 3 - chủ nhật </span>hàng tuần (thứ 2 nghỉ)</strong></span><br>
-	<br>
-	<em><span style="font-size: 14px;">Điền ngay thắc mắc hoặc thông tin cần hỗ trợ của bạn chuyên gia của chúng tôi sẽ tư vấn và phản hồi trong vòng 8h làm việc</span></em></p>
-    </div>
-                        </div>
-						<iframe src="https://www.google.com/maps/d/embed?mid=zdyOPSGRRa2c.knOQG7maIMQ4" width="100%" height="480"></iframe>
+                        <?php
+                        $cate = currentCat();
+                        echo $cate['content_vn'];
+                        ?>
                     </div>
 					<div class="col-xs-12 col-sm-6 section">
 						<div class="extra-padding left">
