@@ -419,16 +419,21 @@ class Categories
 	// lay ra danh sach cac the loai con, co phan trang (san pham, tin tuc, ...)
 	public function getList($page, $set_per_page,$selectAll=0) {
 		global $db, $lg;
-		
+
+
 		if ($this->comp == 1)
         {
             $sql = "select * from articles where active=1 and name_$lg<>'' and cid=".$this->id." order by  id  DESC ,publish_date desc";
+            if ($this->id == 151) {
+                $selectAll = 1;
+            }
             if ($selectAll==1)
             {
                 $sql = "select * from articles where active=1 and name_$lg<>'' order by id  DESC , publish_date desc";
 
             }
         }
+
 
 		if ($this->comp == 2)
 			//$sql = "select * from products where active=1 and name_$lg<>'' and ( cid=".$this->id." or  (`cid_list` like '%;$this->id;%') ) order by num asc, id desc";
@@ -439,8 +444,13 @@ class Categories
 			$sql = "select * from albums where active=1 and name_$lg<>'' and cid=".$this->id." order by num asc, id desc";
 
 
-        if ($this->comp == 1)
-            $arr['paging'] = plpage_seo_article($sql, $page, $set_per_page);
+        if ($this->comp == 1) {
+
+
+           //$arr['paging'] = plpage_seo_article($sql, $page, $set_per_page);
+           $arr['paging'] = plpage_seo_sort($sql, $page, $set_per_page);
+           // $cat->getListwithSQL($page, $set_per_page,$sql);
+        }
         else
             $arr['paging'] = plpage_seo($sql, $page, $set_per_page);
 

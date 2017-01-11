@@ -30,7 +30,7 @@ $cat        = new Categories ($cur);
                              <div class="span4">
                                 <div class="thumb">
                                    <a href="<?= $link ?>">
-                                      <img alt="" src="/<?php echo $article->img; ?>" />
+                                      <img alt="" src="<?php echo DOMAINIMAGE; ?>/<?php echo $article->img; ?>" />
                                    </a>
                                 </div>
                              </div>
