@@ -9,9 +9,9 @@ $getimgbycid = ImagesGroup::getimgbycid ($cid, $limit);
    <div class="container">
       <div class="controls-holder nav-tabs">
          <ul class="inline">
-            <li class="active"><a data-toggle="tab" href="#hot-products">Hot products</a></li>
-            <li><a data-toggle="tab" href="#new-products">New products</a></li>
-            <li><a data-toggle="tab" href="#best-sellers">Best sellers</a></li>
+            <li class="active"><a data-toggle="tab" href="#hot-products">Sản phẩm mới</a></li>
+            <li><a data-toggle="tab" href="#new-products">Đang hot</a></li>
+            <li><a data-toggle="tab" href="#best-sellers">Bán chạy</a></li>
          </ul>
       </div>
       <div class="tab-content">

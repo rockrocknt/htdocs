@@ -1,5 +1,5 @@
 <?php
-include(CLASS_DIR.'quan.class.php');
+include("/" . CLASS_DIR.'quan.class.php');
 $tinh = $_POST['tinh'];
 $id = $_POST['quan'];
 $_SESSION['tinh'] = $tinh;

@@ -93,7 +93,7 @@
                     <div class="text-right">
                         <input class="submit cusmo-btn narrow"
                                onclick="finishcheckout('');return false;"
-                               value="SUBMIT" type="submit">
+                               value="HOÀN TẤT" type="submit">
                     </div>
                     <div id="loading" class="pull-right">
                         <img alt="" src="/images/loader.gif">

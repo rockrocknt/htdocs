@@ -49,7 +49,7 @@ switch($act){
 		break;
 
     case "search":
-        $title_page = "CMS - Tìm kiếm sản phẩm";
+        $title_page = "Tìm kiếm DANH MỤC";
         search();
         $tpl="list";
         break;

@@ -115,7 +115,7 @@ h5,
 }
 .total-price-basket{
     font-weight: bold;
-    color: #70543E;
+    color: #163FA4;
     font-size: 20px;
     top: 10px;
     position: absolute;
@@ -169,7 +169,7 @@ h5,
 }
 .top-categories ul li a {
     text-transform: uppercase;
-    color: #4B4B4B;
+    color: #163FA4;
     font-weight: bold;
 }
 .top-categories ul li:hover a{
@@ -239,7 +239,7 @@ h5,
 }
 .cusmo-btn{
      font-family: "Open Sans"!important;
-    background-color: #FFBB00;
+    background-color: #163FA4;
     border-radius: 30px;
     border:none;
     color: #FFFFFF !important;
@@ -296,7 +296,7 @@ h5,
     overflow: hidden;
 }
 .products-holder .product-item:hover{
-    border:4px solid #FFBB00;
+    border:4px solid #163FA4;
     z-index: 1000;
 }
 .products-holder .product-item .tag-line span{
@@ -332,8 +332,8 @@ h5,
     text-transform: uppercase;
 }
 .products-holder .price{
-    color: #75513B;
-    font-size: 18px;
+    color: #ae1212;
+    font-size: 20px;
     font-weight: 600;
     margin: 5px 0 12px;
 }
@@ -435,7 +435,7 @@ margin-right: auto!important;
     font-size: 13px;
 }
 .section-home-products .controls-holder .active a{
-    color:#373737;
+    color:#163FA4;
 }
 .ie8 .controls-holder li:hover:after,
 .ie8 .controls-holder li.active:after{
@@ -584,7 +584,7 @@ margin-right: auto!important;
 }
 .footer-links-holder h2{
     border-bottom: 1px solid #D6D6D6;
-    color: #3F3F3F;
+    color: #163FA4;
     font-size: 16px;
     font-weight: bold;
     line-height: 18px;
@@ -671,7 +671,7 @@ margin-right: auto!important;
 }
 .section-copyright a,.section-copyright strong{
     font-weight: 600;
-    color:#7b7b7b;
+    color:#163FA4;
 }
 .copyright-links li:after{
     content:"|";
@@ -749,6 +749,9 @@ border-radius: 10px;
 }
 .ie8 .top-menu .dropdown-menu:before{
      border-bottom: 11px solid #ccc;
+}
+.top-menu ul li a:hover {
+    color: #163FA4;
 }
 .top-menu .dropdown-menu:before {
     border-bottom: 11px solid rgba(0, 0, 0, 0.2);
@@ -885,7 +888,7 @@ min-width: 70px!important;
 .breadcrumb-holder{
     height: 40px;
     padding-top: 17px;
-    border-bottom: 4px solid #FFBB00;
+    border-bottom: 4px solid #163FA4;
     background-color: #f5f6f1;
 
 }
@@ -934,7 +937,7 @@ min-width: 70px!important;
     position: relative;
     font-weight: bold;
     text-transform: capitalize;
-    color:#000;
+    color:#163FA4;
     padding: 0 0 0 20px;
 }
 .accordion-widget .accordion-group {
@@ -971,7 +974,7 @@ min-width: 70px!important;
     margin-right: 5px;
 }
 .accordion-widget .accordion-inner ul li a:hover{
-    color:#FFBB00;
+    color:#163FA4;
 }
 .accordion-widget .accordion-inner ul li{
     font-size: 13px;
@@ -1065,6 +1068,7 @@ min-width: 70px!important;
     text-transform: uppercase;
     font-weight: lighter;
     font-size: 45px;
+    color: #163FA4;
 }
 .products-list-head .image-holder {
 display: inline-block;
@@ -1865,4 +1869,14 @@ margin-top: 2px;
 }
 .accordion-inner .active {
     color: #254E7B;
+}
+.price_old {
+    color: #646464;
+    font-size: 18px;
+}
+.danhmucsidebar ul li {
+    line-height: 25px;
+}
+.danhmucsidebar ul li a{
+    color: #000;
 }

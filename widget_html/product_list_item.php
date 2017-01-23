@@ -7,8 +7,9 @@
         <span><?php echo $productObj->getShortDes(); ?></span>
 
     </div>
-    <div class="price">
-        <?php echo formatPrice($productObj->getPrice()); ?>
-    </div>
+    <?php
+    include "widget_html/product_list_item_gia.php";
+    ?>
+
     <a class="cusmo-btn add-button" href="<?php echo $productObj->getLink(); ?>">XEM NGAY</a>
 </div>

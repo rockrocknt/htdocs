@@ -38,21 +38,7 @@
             </div>
          </div>
          <div class="span3">
-            <div class="footer-links-holder">
-               <h2>get in touch</h2>
-               <p>
-                  Cosmetico Shop<br>
-                  Good Town 122, Beaty Centre<br>
-                  (011) 212 222 22
-               </p>
-               <ul class="inline social-icons">
-                  <li><a href="#" class="icon-facebook" ></a></li> 
-                  <li><a href="#" class="icon-google-plus" ></a></li> 
-                  <li><a href="#" class="icon-rss" ></a></li>
-
-                  <li><a href="#" class="icon-linkedin" ></a></li>
-               </ul>
-            </div>
+             <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FMyphamchonamgioi&amp;width=240&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:258px;" allowtransparency="true"></iframe>
          </div>
       </div>
    </div>

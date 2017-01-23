@@ -12,7 +12,9 @@
                                     $imgName = $img['img_vn'];
                                     $name = $img['name_vn'];
                                     ?>
+                                        <a href="/">
                                         <img alt="<?php echo $name; ?>" src="/<?php echo $imgName; ?>" />
+                                        </a>
                                     <?php
                                         break;
                                     } ?>
@@ -33,9 +35,10 @@
                         $listMenu = ImagesGroup::getimgbycid(19);
                         foreach ($listMenu as $img) {
                             $cid = $img['category_id'];
-                            $catMenu = new Categories(Categories::getById($cid));
+                            //$catMenu = new Categories(Categories::getById($cid));
                             $name = $img['name_vn'];
-                            $link = $catMenu->getLink();
+                           // $link = $catMenu->getLink();
+                            $link = $img['url_vn'];
 
                             ?>
                             <li>
@@ -83,73 +86,12 @@
         <div class="container">
             <div class="row-fluid">
                 <div class="span9">
-                    <ul class="inline top-cat-menu">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <?php
-
-                        $listMenu = ImagesGroup::getimgbycid(16);
-                        foreach ($listMenu as $img) {
-                        $cid = $img['category_id'];
-                        $catMe = Categories::getById($cid);
-                        $link = $img['url_vn'];
-                        if (!empty($catMe)) {
-                            $catMenu = new Categories(Categories::getById($cid));
-                            $link = $catMenu->getLink();
-                        }
-                        $name = $img['name_vn'];
-                        ?>
-                            <li
-                                <?php if (($currentCat['pid'] == $catMenu->getID()) || ($currentCat['id'] == $catMenu->getID())): ?>
-                                    active
-                                <?php endif; ?>
-                                >
-                                <a href="<?php echo $link; ?>"><?php echo $name; ?></a>
-                            </li>
-                        <?php
-                        }
-                        ?>
-
-                    </ul>
-
-                    <select class="top-cat-menu dropdown">
-                        <option value="products-grid.html">
-                            FACE
-                        </option>
-
-
-                        <option value="products-grid.html">
-                            BODY
-                        </option>
-                        <option value="products-grid.html">
-                            MAKE UP
-                        </option>
-                        <option value="products-grid.html">
-                            HAIRS
-                        </option>
-                        <option value="products-grid.html">
-                            PERFUMES
-                        </option>
-                        <option value="products-grid.html">
-                            GIFTS
-                        </option>
-                        <option value="products-grid.html">
-                            BRANDS
-                        </option>
-
-                        <option value="products-grid.html">
-                            MUST HAVE
-                        </option>
-
-
-
-                    </select>
+                    <?php include "widget_html/menuMain.php"; ?>
                 </div>
                 <div class="span3">
                     <div class="search-field-holder">
                         <form>
-                            <input class="span12" type="text" placeholder="Type and hit enter">
+                            <input class="span12" type="text" placeholder="Bạn muốn tìm sản phẩm gì...">
                             <i class="icon-search"></i>
                         </form>
                     </div>

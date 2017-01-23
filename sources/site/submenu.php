@@ -17,7 +17,7 @@ if ($cat->getcategories_displaytype()==2)
     }
     if ($cat->getcategories_displaytype()==4)
     {
-        $tpl="list_bosanpham";
+        $tpl="list_sanphamhome";
         return;
     }
     if ($cat->getcategories_displaytype()==5)
