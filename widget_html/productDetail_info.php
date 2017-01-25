@@ -66,14 +66,33 @@
             $productObj = $product;
             include "widget_html/product_list_item_gia.php"; ?>
         </div>
-
-        <div class="buttons-holder">
+        <div class="muaNgayDetail">
+        <div class="buttons-holder ">
             <a class="cusmo-btn add-button"
                onclick="addtocartandredirect('','<?php echo $product->getID(); ?>','qty');return false;"
                href="#">MUA NGAY</a>
+        </div>
+        </div>
+        <div class="muaquazalo">
             <?php /*
-            <a class="add-to-wishlist-btn" href="#"><i class="icon-plus"></i> Add to wishlist</a>
-            */ ?>
+            <div style="float: left;margin-top: 12px;">
+
+                <a id="show_huong_dan" class="huongdanmua" href="#huon_dan_mua" style="
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-top: 25px;
+">Hướng dẫn mua</a>
+            </div>
+ */ ?>
+            <ul class="datmua">
+                <li>Đặt mua qua phone<strong> 08.3602.3702</strong> </li>
+                <li>Đặt mua qua Zalo<strong> 0943.994.968</strong> </li>
+                <li>Đặt mua qua Viber<strong> 0943.994.968</strong> </li>
+            </ul>
+
+
         </div>
     </div>
 

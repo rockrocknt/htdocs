@@ -5,21 +5,6 @@ $currentcat = currentCat();
 $obj = $cat->obj;
 ?>
 
-<section class="page-title">
-		<div class="container">	  
-	      <div class="row">
-		    <div class="col-sm-12 col-md-12 title">
-			  <h2><?php  echo $currentcat['h1_vn']; ?></h2>
-              <ol class="breadcrumb">
-                 
-				<li><a class="pathway" href="/">Trang chủ</a></li>                
-				<li class="active"><?php  echo $cat->getName(); ?></li>				  
-		      </ol>
-			</div>
-		  </div>
-		</div>
-</section>
-	  
 <section class="main-body">
 <div class="container">
 <div class="row">

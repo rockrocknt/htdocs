@@ -308,7 +308,9 @@
             <?
             }
             ?>
-
+            <?php if ($stips[$i]["comp"] == 9) {?>
+            <BR/><a href="/admin.php?do=images&type=3&cid=<?=$stips[$i]["id"]?>">Danh mục sản phẩm (ở trang chủ này) </a><br/>
+            <?php } ?>
             <?
             // trang chu
             if ($stips[$i]["comp"] == 5) { ?>
