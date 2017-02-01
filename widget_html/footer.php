@@ -3,7 +3,7 @@
       <div class="row-fluid">
          <div class="span3">
             <div class="footer-links-holder">
-               <h2>informations</h2>
+               <h2>Về chúng tôi</h2>
                <ul>
                   <li><a href="#" >our blog</a></li> 
                   <li><a href="#" >about our shop</a></li> 
@@ -15,7 +15,7 @@
          </div>
          <div class="span3">
             <div class="footer-links-holder">
-               <h2>customer care</h2>
+               <h2>Hỗ trợ</h2>
                <ul>
                   <li><a href="#" >contact us</a></li> 
                   <li><a href="#" >site map</a></li> 
@@ -27,7 +27,7 @@
          </div>
          <div class="span3">
             <div class="footer-links-holder">
-               <h2>your account</h2>
+               <h2>Tài khoản của bạn</h2>
                <ul>
                   <li><a href="#" >order status</a></li> 
                   <li><a href="#" >my wishlist</a></li> 

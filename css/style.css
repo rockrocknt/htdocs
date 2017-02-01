@@ -332,7 +332,7 @@ h5,
     text-transform: uppercase;
 }
 .products-holder .price{
-    color: #ae1212;
+    color: red;
     font-size: 20px;
     font-weight: 600;
     margin: 5px 0 12px;
@@ -1269,7 +1269,7 @@ float: right;
     display: inline-block;
 }
 .product-info-box .price{
-    color:#70543F;
+    color:red;
     font-size: 24px;
     font-weight: bold;
 }

@@ -1,4 +1,4 @@
-<section class="section-contact">
+<section class="section-contact" style="margin-top: 2px;">
     <div class="container">
 
         <div class="row-fluid">

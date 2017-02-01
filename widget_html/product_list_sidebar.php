@@ -36,11 +36,11 @@
 
             <div class="accordion-group">
                <div class="accordion-heading">
-                  <a class="accordion-toggle" data-toggle="collapse"  href="#collapseTwo">
+                  <a class="accordion-toggle " data-toggle="collapse"  href="#collapseTwo">
                      Thương hiệu
                   </a>
                </div>
-               <div id="collapseTwo" class="accordion-body collapse ">
+               <div id="collapseTwo" class="accordion-body collapse danhmucsidebar">
                   <div class="accordion-inner">
                      <ul>
                          <?php
@@ -85,7 +85,7 @@
                      Bài viết mới nhất
                   </a>
                </div>
-               <div id="collapsePost" class="accordion-body collapse ">
+               <div id="collapsePost" class="accordion-body collapse danhmucsidebar">
                   <div class="accordion-inner">
                      <ul>
                          <?php
