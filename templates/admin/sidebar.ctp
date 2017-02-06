@@ -310,14 +310,14 @@ $do = SafeQueryString('do');
 
 
             <li
-                class="none"
+
                     <?php
                 if (isset($_GET['cid']))
                 {
                     echo  ($_GET['cid']==21)?'class="this"':'';
                 }
                 ?>>
-               <a href="admin.php?do=img_group&act=detail&cid=21" title="">logo THƯƠNG HIỆU trên footer<br/> (180x80)</a></li>
+               <a href="admin.php?do=img_group&act=detail&cid=21" title="">Home - banner nhỏ danh mục <br/> (180x80)</a></li>
 
             <li
 
@@ -340,14 +340,16 @@ $do = SafeQueryString('do');
 
             <!--@NghiepHai Start add 3 menu-->
             <li <?=(isset($_GET['cid']) && $_GET['cid']==30)?'class="this"':''?> >
-               <a href="admin.php?do=img_group&act=detail&cid=30" title="">INFORMATIONS</a>
+               <a href="admin.php?do=img_group&act=detail&cid=30" title="">footer VỀ CHÚNG TÔI</a>
             </li>
             <li <?=(isset($_GET['cid']) && $_GET['cid']==31)?'class="this"':''?> >
-               <a href="admin.php?do=img_group&act=detail&cid=31" title="">CUSTOMER CARE</a>
+               <a href="admin.php?do=img_group&act=detail&cid=31" title="">footer HỖ TRỢ</a>
             </li>
+            <?php /*
             <li <?=(isset($_GET['cid']) && $_GET['cid']==32)?'class="this"':''?> >
                <a href="admin.php?do=img_group&act=detail&cid=32" title="">YOUR ACCOUNT</a>
             </li>
+            */ ?>
             <!--@NghiepHai End add 3 menu-->
 
    </ul>

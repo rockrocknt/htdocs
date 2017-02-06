@@ -1,3 +1,16 @@
+<?php
+function echoFooterEchoLi($list)
+{
+    if (empty($list)) return;
+    for ($i = 0; $i < count($list); $i++) {
+        $item = $list[$i];
+        if (empty($item['id'])) continue;
+        ?>
+        <li><a href="<?php echo $item['url_vn']; ?>"><?php echo $item['name_vn']; ?></a></li>
+    <?php
+    }
+}
+?>
 <section class="section-footer">
    <div class="container">
       <div class="row-fluid">
@@ -5,11 +18,11 @@
             <div class="footer-links-holder">
                <h2>Về chúng tôi</h2>
                <ul>
-                  <li><a href="#" >our blog</a></li> 
-                  <li><a href="#" >about our shop</a></li> 
-                  <li><a href="#" >secure shopping</a></li>
-                  <li><a href="#" >privacy policy</a></li>
-                  <li><a href="#" >delivery informations</a></li>
+                  <?php
+                  $cid = 30;
+                  $list = ImagesGroup::getimgbycid($cid);
+                  echoFooterEchoLi($list);
+                  ?>
                </ul>
             </div>
          </div>
@@ -17,11 +30,11 @@
             <div class="footer-links-holder">
                <h2>Hỗ trợ</h2>
                <ul>
-                  <li><a href="#" >contact us</a></li> 
-                  <li><a href="#" >site map</a></li> 
-                  <li><a href="#" >top sales & bestsellers</a></li>
-                  <li><a href="#" >gift vouchers</a></li>
-                  <li><a href="#" >best sellers</a></li>
+                   <?php
+                   $cid = 31;
+                   $list = ImagesGroup::getimgbycid($cid);
+                   echoFooterEchoLi($list);
+                   ?>
                </ul>
             </div>
          </div>
@@ -29,11 +42,8 @@
             <div class="footer-links-holder">
                <h2>Tài khoản của bạn</h2>
                <ul>
-                  <li><a href="#" >order status</a></li> 
-                  <li><a href="#" >my wishlist</a></li> 
-                  <li><a href="#" >delivery address</a></li>
-                  <li><a href="#" >order history</a></li>
-                  <li><a href="#" >newsletter</a></li>
+                  <li><a href="#" >Đăng nhập</a></li>
+                  <li><a href="#" >Đăng ký</a></li>
                </ul>
             </div>
          </div>

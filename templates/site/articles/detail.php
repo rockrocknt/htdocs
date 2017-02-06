@@ -21,19 +21,19 @@ $cat = new Categories ($cur);
          <!--Start content detail-->
          <div class="span9 ">
             <div class="page-content">
-               <div class="products-page-head">
+               <div class="postDetail">
                   <h1><?php echo $article->getName (); ?></h1>
                   <div class="tag-line">
                       <?php echo $article->getShort (); ?>
                   </div>
                </div>
                <div class="col-sm-12 art-statistic">
-                  <p>Ngày đăng: <?php echo $article->getDate (); ?></p>
+               <?php /*   <p>Ngày đăng: <?php echo $article->getDate (); ?></p>
+
+ */?>
                   <p>Lượt xem:  <?php echo $article->getView (); ?></p>
                </div>
-               <div class="row-fluid">
-                   <?php echo str_replace ("Arial", "", $article->getContent ()); ?>
-               </div>
+
                <div class="col-sm-12 blogPost">
                    <?php echo str_replace ("Arial", "", $article->getContent ()); ?>
                </div>

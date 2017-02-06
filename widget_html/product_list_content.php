@@ -10,7 +10,24 @@ if ($typesort == "") $typesort = 4;
 ?>
 <div class="span9">
    <div class="products-list-head">
+       <?php if (getquery('act') != 'search') {
+       ?>
+
        <h1><?=$currentcat['name_vn']?></h1>
+       <?php
+       } else {
+           ?>
+           <h1>Kết quả tìm kiếm của "<?=getquery('key')?>"</h1>
+           <style>
+               h1 {
+                   font-size: 20px !important;
+                   font-weight: bold;
+               }
+           </style>
+       <?php
+       }
+       ?>
+
        <div class="tag-line">
            <?=$currentcat['short_vn']?>
        </div>

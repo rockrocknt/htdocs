@@ -202,7 +202,7 @@ h5,
     background-image: url(../images/slider-bg.jpg);
     background-position: center center;
 
-    border-bottom: 4px solid #FFBB00;
+    border-bottom: 4px solid #163FA4;
 }
 .flex-caption {
     color:#70543F;
@@ -1854,7 +1854,7 @@ margin-top: 2px;
         display: none;
     }
 .pagination-container .pagination li.Active a {
-    color: #FFBB00;
+    color: #163FA4;
     font-weight: bold;
 }
 .marginLessBreadCum {

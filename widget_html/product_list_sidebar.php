@@ -1,7 +1,16 @@
 
 <div class="span3">
    <div class="sidebar">
-      <div class="accordion-widget category-accordions">
+       <?php if (getquery('act') != 'search') {
+       ?>
+
+       <hr>
+       <?php include "widget_html/product_list_sort.php"; ?>
+       <?php
+       }
+       ?>
+
+       <div class="accordion-widget category-accordions">
 
          <div class="accordion" >
             <div class="accordion-group">
@@ -156,8 +165,6 @@
 
       </div> 
 
-      <hr>
-      <?php include "widget_html/product_list_sort.php"; ?>
 
    </div>
 </div>

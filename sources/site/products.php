@@ -4,6 +4,10 @@ getColorandSize();
 if (isset($_GET['act'])) $act= $_GET['act'];
 
 switch($act){
+  case 'updateNewDataFromLive':
+      updateNewDataFromLive();
+        break;
+
   case 'detail':
     ShowDetail();
     $tpl = 'detail';
@@ -23,6 +27,7 @@ switch($act){
     $title_page = CAT_SEARCH_RESULT;
     $tpl = 'list';
     break;
+
     case 'detail_quickview':
 
         $tpl = 'detail_quickview';
@@ -46,6 +51,32 @@ switch($act){
     $tpl = "list";
     break;
 }
+function updateNewDataFromLive()
+{
+    global $db;
+    /*
+    $sql = "select * from `products_live` where `active` = 1";
+    $listProductCu = $db->getAll($sql);
+    foreach($listProductCu as $productCu) {
+        $sql = "select * from `products` where `id` = " . $productCu['id'];
+        $productHienTai = $db->getRow($sql);
+        if (!empty($productHienTai['id'])) {
+            $arr['img'] = $productCu['img'];
+            $arr['id_cu'] = $productCu['id'];
+            $arr['content_vn'] = $productCu['descs_vn'];
+            vaUpdate('products', $arr, ' `id` = ' . $productHienTai['id']);
+        }
+    }
+    */
+    $sql = "select * from `categories` where `active` = 1";
+
+    $listProductCu = $db->getAll($sql);
+    foreach($listProductCu as $productCu) {
+        $arr['content_vn'] = $productCu['desc_vn'];
+   //     vaUpdate('categories', $arr, ' `id` = ' . $productCu['id']);
+    }
+}
+
 function insertcomment()
 {
     global $page,$tpl, $db, $plpage,$lg,$cat, $products;
@@ -500,6 +531,9 @@ function Search()
     $result = searchKey($key, $page, $set_per_page);
     $plpage = $result['paging'];
     $products = $result['list'];
+      $plpage = $result['paging'];
+      $products = $result['list'];
+      global $listProduct;
+      $listProduct = $products;
   }
 }
-?>

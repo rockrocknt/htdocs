@@ -90,8 +90,12 @@
                 </div>
                 <div class="span3">
                     <div class="search-field-holder">
-                        <form>
-                            <input class="span12" type="text" placeholder="Bạn muốn tìm sản phẩm gì...">
+                        <form onsubmit="searchKos(); return false;" action="/index.php?do=products&act=search">
+                            <input
+                                name="key"
+                                class="span12"
+                                id="search-key"
+                                type="text" placeholder="Bạn muốn tìm sản phẩm gì...">
                             <i class="icon-search"></i>
                         </form>
                     </div>

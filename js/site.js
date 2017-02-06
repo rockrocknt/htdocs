@@ -137,3 +137,10 @@ function SearchAdvance()
 	location.href= url;
 	
 }
+
+function searchKos()
+{
+    var key = document.getElementById("search-key").value;
+    var qs = encodeURI(key);
+    location.href =  "/index.php?do=products&act=search&key=" + qs;
+}

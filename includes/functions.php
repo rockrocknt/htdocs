@@ -282,12 +282,16 @@ function searchKey($key, $page, $set_per_page)
 {
     global $db, $lg, $do;
 
+    $table = "articles";
+    $sql="select * from $table where active=1 and (name_$lg like '%".$key."%' or short_$lg like '%".$key."%' or content_$lg like '%".$key."%'  or unique_key_vn like '%".vietnamese_permalink($key)."%' ) order by num asc, id desc";
     if ($do=='articles')
         $table = "articles";
-    else
+    else {
         $table = "products";
+        $sql="select * from $table where (`code` = '$key') or active=1 and (name_$lg like '%".$key."%' or short_$lg like '%".$key."%' or content_$lg like '%".$key."%'  or unique_key_vn like '%".vietnamese_permalink($key)."%' ) order by num asc, id desc";
+    }
 
-    $sql="select * from $table where active=1 and (name_$lg like '%".$key."%' or short_$lg like '%".$key."%' or content_$lg like '%".$key."%'  or unique_key_vn like '%".vietnamese_permalink($key)."%' ) order by num asc, id desc";
+
     $arr['paging'] = plpage($sql, $page, $set_per_page);
     $sqlstmt = sqlmod($sql, $page, $set_per_page);
     $arr['list'] = $db->getAll($sqlstmt);
@@ -849,8 +853,8 @@ function plpage_seo_sort($sqlstmt, $page, $set_per_page)
         //$str .= '<li class="First"><a href="'. $FullUrl . $my_url. $typesorttext . '/' ."\" class=\"PrevBtn\">First</a></li>";
         //$str .= '<li class="First"><a href="'. $FullUrl . $my_url. $typesorttext . ($pageprev==1?'':("-$trang-".$pageprev)) . '/' ."\" class=\"PrevBtn\">Prev</a></li>";
 		
-		$str .= '<li class="First"><a href="'. $my_url ."\" class=\"PrevBtn\">First</a></li>";
-        $str .= '<li class="First"><a href="'. $my_url . ($pageprev==1? '': ("&page=".$pageprev))   ."\" class=\"PrevBtn\">Prev</a></li>";
+		$str .= '<li class="First"><a href="'. $my_url ."\" class=\"PrevBtn\">Trang đầu</a></li>";
+        $str .= '<li class="First"><a href="'. $my_url . ($pageprev==1? '': ("&page=".$pageprev))   ."\" class=\"PrevBtn\">Trước</a></li>";
     }
 
     for($i=($page-2>1)?$page-2:1;$i<=$page+2 && $i<=$k;$i++){
@@ -870,8 +874,8 @@ function plpage_seo_sort($sqlstmt, $page, $set_per_page)
 
     if ($page<$p){
         $pagenext=$page+1;
-        $str .= '<li><a href="'.  $my_url . ("&page=".$pagenext) . "\" class=\"NextBtn\">Next</a></li>";
-        $str .= '<li><a href="'.  $my_url . ("&page=".$p) . "\" class=\"NextBtn\">Last</a></li>";
+        $str .= '<li><a href="'.  $my_url . ("&page=".$pagenext) . "\" class=\"NextBtn\">Tiếp</a></li>";
+        $str .= '<li><a href="'.  $my_url . ("&page=".$p) . "\" class=\"NextBtn\">Trang cuối</a></li>";
     }
 
     $str .= "</ul>";

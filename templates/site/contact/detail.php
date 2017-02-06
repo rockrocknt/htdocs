@@ -1,6 +1,12 @@
 <section class="section-contact">
     <div class="container">
         <div class="row-fluid">
+            <div class="span12">
+        <iframe src="https://www.google.com/maps/d/embed?mid=zqEW8_yHn6SI.kVB4RsFNZ0Rc"
+                width="100%" height="450" frameborder="0" style="border:0"></iframe>
+            </div>
+        </div>
+        <div class="row-fluid">
             <div class="span6">
                 <div class=" contact-form-holder">
 

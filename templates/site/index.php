@@ -53,6 +53,7 @@
     <?php include 'widget_html/footer.php'; ?>
 
     <?php include 'widget_html/section-copyright.php'; ?>
+    <?php include 'widget_html/footer_script.php'; ?>
 </div>
 
 

@@ -939,7 +939,7 @@
 			$where = "`cid` = " . $this->cid;
 			$where .= " and `is_available` = 1";
             //   echo count($less). " ". count($greater);
-			$sql = "select * from `products`  where " . $where . " order by `is_available` desc limit 10";
+			$sql = "select * from `products`  where " . $where . " order by `is_available` desc limit 9";
 			$result = $db->getAll($sql);
 			
             return $result;

@@ -27,18 +27,20 @@ $cat        = new Categories ($cur);
                        ?>
                        <div class="list-item">
                           <div class="row-fluid">
-                             <div class="span4">
+                             <div class="span4 postListThumb">
                                 <div class="thumb">
                                    <a href="<?= $link ?>">
                                       <img alt="" src="<?php echo DOMAINIMAGE; ?>/<?php echo $article->img; ?>" />
                                    </a>
                                 </div>
                              </div>
-                             <div class="span8">
-                                <h1> <a href="<?= $link ?>"> <?= $name ?> </a></h1>
+                             <div class="span8 postList">
+                                <h3> <a href="<?= $link ?>"> <?= $name ?> </a></h3>
                                 <div class="inf">
+                                   <?php /*
                                    <span class="tme"><?php echo $article->getDate (); ?></span>
                                    <span>/</span>
+                                    */ ?>
                                    <span>Lượt xem : <?php echo $article->getView (); ?> </span>
                                 </div>
                                 <div class="articleShort">
